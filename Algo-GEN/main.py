@@ -11,7 +11,7 @@ from ga import genetic_algorithm, decode
 # -----------------------------
 from selection import tournament_selection, roulette_wheel_selection
 from crossover import order_crossover, pmx_crossover
-from mutation import swap_mutation, inversion_mutation
+from mutation import swap_mutation, mutation_inversion
 
 # -----------------------------
 # Load instance
@@ -23,9 +23,9 @@ instance = read_cvrp_instance("../instances/A/A-n32-k5.vrp")
 # -----------------------------
 experiments = [
     ("Tournament + OX + Swap", tournament_selection, order_crossover, swap_mutation),
-    ("Tournament + OX + Inversion", tournament_selection, order_crossover, inversion_mutation),
+    ("Tournament + OX + Inversion", tournament_selection, order_crossover, mutation_inversion),
     ("Roulette + OX + Swap", roulette_wheel_selection, order_crossover, swap_mutation),
-    ("Roulette + PMX + Inversion", roulette_wheel_selection, pmx_crossover, inversion_mutation)
+    ("Roulette + PMX + Inversion", roulette_wheel_selection, pmx_crossover, mutation_inversion)
 ]
 
 results = {}  # for plotting
