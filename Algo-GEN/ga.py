@@ -78,6 +78,10 @@ def genetic_algorithm(
 
             fitnesses.append(1 / (cost + 1e-6))
 
+            if cost < best_cost:
+                best_cost = cost
+                best_chrom = chrom[:]
+
         new_population = []
 
         while len(new_population) < pop_size:
@@ -98,6 +102,7 @@ def genetic_algorithm(
 
             new_population.append(child)
 
+
         population = new_population
 
         # Track best cost for this generation
@@ -108,5 +113,6 @@ def genetic_algorithm(
         best_cost = min(best_cost, gen_best)
         history.append(best_cost)
 
+
     exec_time = time.time() - start_time
-    return best_cost, history, exec_time
+    return best_chrom, best_cost, history, exec_time

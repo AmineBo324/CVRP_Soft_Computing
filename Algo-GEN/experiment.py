@@ -1,44 +1,48 @@
-import matplotlib.pyplot as plt
-from ga import genetic_algorithm
-from selection import *
-from crossover import *
-from mutation import *
+import json
+from ga import genetic_algorithm, decode
+from selection import tournament_selection
+from crossover import order_crossover
+from mutation import swap_mutation
+from src.cost import solution_cost
 from src.reader import read_cvrp_instance
+import time
+from src.feasibility import is_solution_feasible
 
+# Load instance
 instance = read_cvrp_instance("../instances/A/A-n32-k5.vrp")
 
-experiments = [
-    ("Tournament + OX + Swap",
-     tournament_selection, order_crossover, swap_mutation),
+# Run GA
+start_time = time.time()
+best_chrom, best_cost, history, exec_time = genetic_algorithm(
+    instance,
+    selection=tournament_selection,
+    crossover=order_crossover,
+    mutation=swap_mutation,
+    pop_size=50,
+    generations=200
+)
 
-    #("Tournament + OX + Inversion",
-     #tournament_selection, order_crossover, inversion_mutation),
+# Decode the chromosome to routes
+best_solution = decode(best_chrom, instance)
 
-    ("Roulette + PMX + Swap",
-     roulette_wheel_selection, pmx_crossover, swap_mutation)
-]
+# Check feasibility
+feasible = is_solution_feasible(
+    best_solution,
+    demands=instance["demands"],
+    capacity=instance["capacity"],
+    depot=instance["depot"]
+)
 
-results = {}
+# Prepare JSON output
+output = {
+    "instance": instance["name"],
+    "method": "Genetic Algorithm",
+    "best_cost": round(solution_cost(best_solution, instance["coords"]), 2),
+    "execution_time": round(exec_time, 2),
+    "feasible": feasible
+}
 
-for name, sel, cross, mut in experiments:
-    best, hist, t = genetic_algorithm(
-        instance,
-        selection=sel,
-        crossover=cross,
-        mutation=mut,
-        pop_size=100,
-        generations=300
-    )
-    results[name] = hist
-    print(f"{name} → Best: {best:.2f} | Time: {t:.2f}s")
-
-for name, hist in results.items():
-    plt.plot(hist, label=name)
-
-plt.xlabel("Generation")
-plt.ylabel("Best Cost")
-plt.title("GA Convergence Comparison")
-plt.legend()
-plt.grid(True)
-plt.tight_layout()
-plt.show()
+# Print or save
+print(json.dumps(output, indent=2))
+with open("result.json", "w") as f:
+    json.dump(output, f, indent=2)
