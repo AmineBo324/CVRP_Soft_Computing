@@ -13,3 +13,6 @@ def roulette_wheel_selection(population, fitnesses):
         current += fit
         if current >= pick:
             return chrom
+
+
+
