@@ -21,6 +21,7 @@ def order_crossover(p1, p2):
     return child
 
 
+
 def mutation_inversion(chrom):
     """
     Inversion mutation: Select a random subsequence and reverse it.
