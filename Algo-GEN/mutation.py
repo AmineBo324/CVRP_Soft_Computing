@@ -19,3 +19,13 @@ def order_crossover(p1, p2):
                 ptr += 1
             child[ptr] = gene
     return child
+
+
+def mutation_inversion(chrom):
+    """
+    Inversion mutation: Select a random subsequence and reverse it.
+    """
+    c = chrom[:]
+    start, end = sorted(random.sample(range(len(c)), 2))
+    c[start:end+1] = c[start:end+1][::-1]
+    return c
