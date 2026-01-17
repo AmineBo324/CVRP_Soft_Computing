@@ -14,7 +14,6 @@ def read_cvrp_instance(file_path):
     with open(file_path, "r") as f:
         for line in f:
             line = line.strip()
-
             if not line:
                 continue
 
@@ -22,7 +21,6 @@ def read_cvrp_instance(file_path):
                 instance["name"] = line.split(":")[1].strip()
 
             elif line.startswith("COMMENT") and "Optimal value" in line:
-                # Extract known optimum if present
                 try:
                     instance["optimal"] = int(line.split("Optimal value:")[1].split(")")[0])
                 except:
@@ -51,10 +49,14 @@ def read_cvrp_instance(file_path):
                 i, d = map(int, line.split())
                 instance["demands"][i] = d
 
-            elif section == "DEPOT_SECTION":
+            elif section == "depot":
                 if line == "-1":
                     section = None
                 else:
                     instance["depot"] = int(line)
+
+    # ---------- FIX ----------
+    # Customers are all nodes except the depot
+    instance["customers"] = [i for i in instance["demands"].keys() if i != instance["depot"]]
 
     return instance
