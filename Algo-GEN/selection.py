@@ -18,22 +18,14 @@ def roulette_wheel_selection(population, fitnesses):
 
 
 def deterministic_selection(population, fitnesses, num_select):
-    """
-    Deterministic selection: Select the top num_select individuals based on fitness (highest first).
-    """
     sorted_pop = sorted(zip(population, fitnesses), key=lambda x: x[1], reverse=True)
     return [ind for ind, fit in sorted_pop[:num_select]]
 
-def uniform_selection(population, num_select):
-    """
-    Uniform selection: Randomly select individuals uniformly, ignoring fitness.
-    """
-    return random.sample(population, num_select)
+def uniform_selection(population, fitnesses=None):
+    return random.choice(population)
 
 def rank_selection(population, fitnesses):
-    """
-    Rank-based selection: Assign probabilities linearly based on rank (best has highest prob).
-    """
+
     sorted_indices = sorted(range(len(fitnesses)), key=lambda i: fitnesses[i], reverse=True)
     ranks = [0] * len(population)
     for rank, idx in enumerate(sorted_indices):

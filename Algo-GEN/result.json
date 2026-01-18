@@ -1,7 +1,7 @@
 {
   "instance": "A-n32-k5",
   "method": "Genetic Algorithm",
-  "best_cost": 1772.6,
-  "execution_time": 0.46,
+  "best_cost": 1793.76,
+  "execution_time": 0.81,
   "feasible": true
 }

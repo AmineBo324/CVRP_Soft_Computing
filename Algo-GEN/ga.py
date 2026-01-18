@@ -57,8 +57,8 @@ def genetic_algorithm(
     selection,
     crossover,
     mutation,
-    pop_size=100,
-    generations=300,
+    pop_size=150,
+    generations=800,
     px=0.9,
     pm=0.2
 ):

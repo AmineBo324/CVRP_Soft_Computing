@@ -16,7 +16,6 @@ def order_crossover(p1, p2):
 
     return child
 
-
 def pmx_crossover(p1, p2):
     size = len(p1)
     c1 = [None] * size

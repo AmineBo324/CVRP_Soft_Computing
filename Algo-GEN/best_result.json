@@ -1,7 +1,7 @@
 {
   "instance": "A-n32-k5",
-  "method": "Tournament + OX + Swap",
-  "best_cost": 1001.5,
-  "execution_time": 0.45,
+  "method": "Tournament + PMX + Inversion",
+  "best_cost": 938.78,
+  "execution_time": 0.68,
   "feasible": true
 }
