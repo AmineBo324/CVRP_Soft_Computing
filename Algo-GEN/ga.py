@@ -69,49 +69,54 @@ def genetic_algorithm(
 
     start_time = time.time()
 
-    for gen in range(generations):
-        # Compute fitness safely
-        fitnesses = []
-        for chrom in population:
-            # Compute cost
-            cost = solution_cost(decode(chrom, instance), instance["coords"])
+    elite_size = max(1, pop_size // 20)
 
+    best_chrom = None
+    best_cost = float("inf")
+
+    for gen in range(generations):
+        fitnesses = []
+        costs = []
+
+        # ---- FITNESS ----
+        for chrom in population:
+            cost = solution_cost(decode(chrom, instance), instance["coords"])
+            costs.append(cost)
             fitnesses.append(1 / (cost + 1e-6))
 
             if cost < best_cost:
                 best_cost = cost
                 best_chrom = chrom[:]
 
-        new_population = []
+        # ---- ELITISM ----
+        ranked = sorted(
+            zip(population, costs),
+            key=lambda x: x[1]
+        )
+        elites = [c[:] for c, _ in ranked[:elite_size]]
 
+        new_population = elites[:]
+
+        # ---- REPRODUCTION ----
         while len(new_population) < pop_size:
-            # Copy parents to avoid in-place modification
             p1 = selection(population, fitnesses)[:]
             p2 = selection(population, fitnesses)[:]
 
-            # Crossover
             child = crossover(p1, p2) if random.random() < px else p1[:]
 
-            # Mutation
             if random.random() < pm:
                 child = mutation(child[:])
 
-            # Repair invalid chromosome
             if not is_valid_chromosome(child, customers):
                 child = repair_chromosome(child, customers)
 
             new_population.append(child)
 
-
         population = new_population
 
-        # Track best cost for this generation
-        gen_best = min(
-            solution_cost(decode(c, instance), instance["coords"])
-            for c in population
-        )
-        best_cost = min(best_cost, gen_best)
-        history.append(best_cost)
+        gen_best = min(costs)
+        history.append(gen_best)
+
 
 
     exec_time = time.time() - start_time
