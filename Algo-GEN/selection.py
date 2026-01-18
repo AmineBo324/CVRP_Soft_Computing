@@ -21,8 +21,9 @@ def deterministic_selection(population, fitnesses, num_select):
     sorted_pop = sorted(zip(population, fitnesses), key=lambda x: x[1], reverse=True)
     return [ind for ind, fit in sorted_pop[:num_select]]
 
-def uniform_selection(population, fitnesses=None):
-    return random.choice(population)
+def uniform_selection(population, num_select):
+
+    return random.sample(population, num_select)
 
 def rank_selection(population, fitnesses):
 
