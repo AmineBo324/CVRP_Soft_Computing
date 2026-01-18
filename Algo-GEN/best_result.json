@@ -1,7 +1,7 @@
 {
   "instance": "A-n32-k5",
-  "method": "Tournament + OX + Swap",
-  "best_cost": 1001.5,
-  "execution_time": 0.45,
+  "method": "Rank + OX + Inversion",
+  "best_cost": 891.66,
+  "execution_time": 0.56,
   "feasible": true
 }
