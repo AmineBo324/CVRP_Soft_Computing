@@ -1,0 +1,352 @@
+[
+  {
+    "instance": "A-n32-k5",
+    "method": "Remainder + PMX + Inversion",
+    "best_cost": 1462.79,
+    "execution_time": 1.18,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Remainder + PMX + Inversion",
+    "best_cost": 1591.41,
+    "execution_time": 1.16,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Tournament + OX + Swap",
+    "best_cost": 1047.87,
+    "execution_time": 0.31,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Tournament + OX + Inversion",
+    "best_cost": 938.71,
+    "execution_time": 0.3,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Tournament + PMX + Swap",
+    "best_cost": 1140.74,
+    "execution_time": 0.25,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Tournament + PMX + Inversion",
+    "best_cost": 984.35,
+    "execution_time": 0.25,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Roulette + OX + Swap",
+    "best_cost": 1190.17,
+    "execution_time": 0.28,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Roulette + OX + Inversion",
+    "best_cost": 1150.36,
+    "execution_time": 0.28,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Roulette + PMX + Swap",
+    "best_cost": 1482.3,
+    "execution_time": 0.28,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Roulette + PMX + Inversion",
+    "best_cost": 1469.24,
+    "execution_time": 0.29,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Rank + OX + Swap",
+    "best_cost": 1075.18,
+    "execution_time": 0.4,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Rank + OX + Inversion",
+    "best_cost": 977.48,
+    "execution_time": 0.39,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Rank + PMX + Swap",
+    "best_cost": 1093.18,
+    "execution_time": 0.35,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Rank + PMX + Inversion",
+    "best_cost": 1352.99,
+    "execution_time": 0.41,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Uniform + OX + Swap",
+    "best_cost": 1563.68,
+    "execution_time": 0.76,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Uniform + OX + Inversion",
+    "best_cost": 1550.85,
+    "execution_time": 0.63,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Uniform + PMX + Swap",
+    "best_cost": 1596.7,
+    "execution_time": 0.5,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Uniform + PMX + Inversion",
+    "best_cost": 1586.61,
+    "execution_time": 0.5,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Deterministic + OX + Swap",
+    "best_cost": 1115.26,
+    "execution_time": 0.3,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Deterministic + OX + Inversion",
+    "best_cost": 908.75,
+    "execution_time": 0.29,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Deterministic + PMX + Swap",
+    "best_cost": 1064.07,
+    "execution_time": 0.24,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Deterministic + PMX + Inversion",
+    "best_cost": 941.5,
+    "execution_time": 0.25,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Remainder + OX + Swap",
+    "best_cost": 1294.4,
+    "execution_time": 1.15,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Remainder + OX + Inversion",
+    "best_cost": 1236.28,
+    "execution_time": 1.26,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Remainder + PMX + Swap",
+    "best_cost": 1624.5,
+    "execution_time": 1.21,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Remainder + PMX + Inversion",
+    "best_cost": 1440.01,
+    "execution_time": 1.22,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Tournament + OX + Swap",
+    "best_cost": 1088.92,
+    "execution_time": 0.29,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Tournament + OX + Inversion",
+    "best_cost": 941.46,
+    "execution_time": 0.29,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Tournament + PMX + Swap",
+    "best_cost": 1005.41,
+    "execution_time": 0.24,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Tournament + PMX + Inversion",
+    "best_cost": 1083.74,
+    "execution_time": 0.24,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Roulette + OX + Swap",
+    "best_cost": 1198.09,
+    "execution_time": 0.27,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Roulette + OX + Inversion",
+    "best_cost": 1288.59,
+    "execution_time": 0.27,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Roulette + PMX + Swap",
+    "best_cost": 1496.45,
+    "execution_time": 0.28,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Roulette + PMX + Inversion",
+    "best_cost": 1433.54,
+    "execution_time": 0.28,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Rank + OX + Swap",
+    "best_cost": 1073.11,
+    "execution_time": 0.37,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Rank + OX + Inversion",
+    "best_cost": 944.34,
+    "execution_time": 0.37,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Rank + PMX + Swap",
+    "best_cost": 1242.44,
+    "execution_time": 0.35,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Rank + PMX + Inversion",
+    "best_cost": 1382.32,
+    "execution_time": 0.39,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Uniform + OX + Swap",
+    "best_cost": 1571.59,
+    "execution_time": 0.59,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Uniform + OX + Inversion",
+    "best_cost": 1625.93,
+    "execution_time": 0.69,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Uniform + PMX + Swap",
+    "best_cost": 1559.83,
+    "execution_time": 0.49,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Uniform + PMX + Inversion",
+    "best_cost": 1542.16,
+    "execution_time": 0.5,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Deterministic + OX + Swap",
+    "best_cost": 1122.46,
+    "execution_time": 0.29,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Deterministic + OX + Inversion",
+    "best_cost": 876.38,
+    "execution_time": 0.28,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Deterministic + PMX + Swap",
+    "best_cost": 1001.29,
+    "execution_time": 0.23,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Deterministic + PMX + Inversion",
+    "best_cost": 860.44,
+    "execution_time": 0.23,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Remainder + OX + Swap",
+    "best_cost": 1132.16,
+    "execution_time": 1.15,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Remainder + OX + Inversion",
+    "best_cost": 1369.42,
+    "execution_time": 1.13,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Remainder + PMX + Swap",
+    "best_cost": 1506.02,
+    "execution_time": 1.15,
+    "feasible": true
+  },
+  {
+    "instance": "A-n32-k5",
+    "method": "Remainder + PMX + Inversion",
+    "best_cost": 1496.55,
+    "execution_time": 1.14,
+    "feasible": true
+  }
+]
