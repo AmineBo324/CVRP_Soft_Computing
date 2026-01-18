@@ -47,34 +47,47 @@ def rank_selection(population, fitnesses):
         if current >= pick:
             return population[i]
 
+
 def remainder_selection(population, fitnesses):
-    """
-    Stochastic remainder selection: Proportional selection with integer and fractional parts.
-    First, select floor(expected) copies deterministically, then probabilistic for remainders.
-    Assumes we select the entire population size.
-    """
-    pop_size = len(population)
+
+    import random
+
+    N = len(population)
     total_fit = sum(fitnesses)
-    expected = [pop_size * (fit / total_fit) for fit in fitnesses]
 
-    new_pop = []
-    remainders = []
+    if total_fit == 0:
+        return random.choice(population)
 
-    for i, exp in enumerate(expected):
-        integer_part = int(exp)
-        fractional_part = exp - integer_part
-        new_pop.extend([population[i]] * integer_part)
-        if fractional_part > 0:
-            remainders.append((i, fractional_part))
 
-    # Probabilistic selection for remainders
-    remainders.sort(key=lambda x: x[1], reverse=True)
-    needed = pop_size - len(new_pop)
-    for i in range(needed):
-        if remainders:
-            idx, _ = remainders[i % len(remainders)]
-            new_pop.append(population[idx])
+    probabilities = [f / total_fit for f in fitnesses]
+    E_values = [N * p for p in probabilities]
 
-    return new_pop
 
+    selected_indices = []
+    for i, E in enumerate(E_values):
+        count = int(E)  # Ent(Ei)
+        selected_indices.extend([i] * count)
+
+
+    remainders = [E - int(E) for E in E_values]
+    total_remainder = sum(remainders)
+
+
+    while len(selected_indices) < N:
+        if total_remainder > 0:
+            # Sélection par roulette sur les restes
+            rand = random.uniform(0, total_remainder)
+            cumulative = 0
+            for i, remainder in enumerate(remainders):
+                cumulative += remainder
+                if rand <= cumulative:
+                    selected_indices.append(i)
+                    break
+        else:
+
+            selected_indices.append(random.randint(0, N - 1))
+
+
+    chosen_index = random.choice(selected_indices)
+    return population[chosen_index]
 
