@@ -1,7 +1,10 @@
 import time
 import matplotlib.pyplot as plt
 import json
-from src.reader import read_cvrp_instance
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+from src.reader import read_cvrp_instance   
 from src.cost import solution_cost
 from src.feasibility import is_solution_feasible
 from ga import genetic_algorithm, decode
