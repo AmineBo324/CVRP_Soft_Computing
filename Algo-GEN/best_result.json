@@ -1,7 +1,7 @@
 {
   "instance": "A-n32-k5",
-  "method": "Rank + OX + Swap",
-  "best_cost_best_run": 799.64,
-  "avg_best_cost_over_runs": 848.72,
-  "execution_time_best_run": 12.11
+  "method": "Tournament + OX + Inversion",
+  "best_cost_best_run": 797.45,
+  "avg_best_cost_over_runs": 860.24,
+  "execution_time_best_run": 41.8
 }

@@ -99,16 +99,17 @@ for idx, (name, sel, cross, mut) in enumerate(experiments, 1):
         print(f"  Run {run+1}/{RUNS} ...")
 
         best_chrom, best_cost, history, exec_time = genetic_algorithm(
-            instance,
-            dist=dist,
-            selection=sel,
-            crossover=cross,
-            mutation=mut,
-            pop_size=80,
-            generations=300,
-            px=0.9,
-            pm=0.25
-        )
+        instance,
+        dist,
+        selection=rank_selection,
+        crossover=order_crossover,
+        mutation=swap_mutation,
+        pop_size=120,
+        generations=600,
+        px=0.9,
+        pm=0.25
+)
+
 
         # Decode + final local search
         sol = decode(best_chrom, instance)

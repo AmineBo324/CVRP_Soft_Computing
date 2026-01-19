@@ -3,9 +3,9 @@ import random
 import time
 from src.cost import solution_cost
 
-# -----------------------------
-# Decode chromosome to routes
-# -----------------------------
+# =====================================================
+# Decode chromosome to CVRP routes
+# =====================================================
 def decode(chromosome, instance):
     routes = []
     route = [instance["depot"]]
@@ -26,22 +26,20 @@ def decode(chromosome, instance):
     routes.append(route)
     return routes
 
-# -----------------------------
-# Chromosome validation / repair
-# -----------------------------
+
+# =====================================================
+# Validation / repair
+# =====================================================
 def is_valid_chromosome(chrom, customers):
-    return (
-        chrom is not None and
-        len(chrom) == len(customers) and
-        set(chrom) == set(customers)
-    )
+    return chrom is not None and len(chrom) == len(customers) and set(chrom) == set(customers)
 
 def repair_chromosome(customers):
     return random.sample(customers, len(customers))
 
-# -----------------------------
+
+# =====================================================
 # Local search: 2-opt
-# -----------------------------
+# =====================================================
 def _route_cost(route, dist):
     return sum(dist[(route[i], route[i+1])] for i in range(len(route)-1))
 
@@ -68,9 +66,84 @@ def two_opt_route(route, dist):
 def local_search_solution(solution, dist):
     return [two_opt_route(r, dist) for r in solution]
 
-# -----------------------------
-# Genetic Algorithm
-# -----------------------------
+
+# =====================================================
+# Inter-route relocate move
+# =====================================================
+def relocate_move(solution, instance):
+    sol = [r[:] for r in solution]
+
+    if len(sol) < 2:
+        return solution
+
+    r1, r2 = random.sample(range(len(sol)), 2)
+    route1 = sol[r1][1:-1]
+    route2 = sol[r2][1:-1]
+
+    if not route1:
+        return solution
+
+    cust = random.choice(route1)
+    demand = instance["demands"][cust]
+    load2 = sum(instance["demands"][c] for c in route2)
+
+    if load2 + demand > instance["capacity"]:
+        return solution
+
+    route1.remove(cust)
+    pos = random.randint(0, len(route2))
+    route2.insert(pos, cust)
+
+    sol[r1] = [instance["depot"]] + route1 + [instance["depot"]]
+    sol[r2] = [instance["depot"]] + route2 + [instance["depot"]]
+
+    return sol
+
+
+# =====================================================
+# Inter-route exchange move
+# =====================================================
+def exchange_move(solution, instance):
+    sol = [r[:] for r in solution]
+
+    if len(sol) < 2:
+        return solution
+
+    r1, r2 = random.sample(range(len(sol)), 2)
+    route1 = sol[r1][1:-1]
+    route2 = sol[r2][1:-1]
+
+    if not route1 or not route2:
+        return solution
+
+    c1 = random.choice(route1)
+    c2 = random.choice(route2)
+
+    d1 = instance["demands"][c1]
+    d2 = instance["demands"][c2]
+
+    load1 = sum(instance["demands"][c] for c in route1)
+    load2 = sum(instance["demands"][c] for c in route2)
+
+    if load1 - d1 + d2 > instance["capacity"]:
+        return solution
+    if load2 - d2 + d1 > instance["capacity"]:
+        return solution
+
+    i1 = route1.index(c1)
+    i2 = route2.index(c2)
+
+    route1[i1], route2[i2] = c2, c1
+
+    sol[r1] = [instance["depot"]] + route1 + [instance["depot"]]
+    sol[r2] = [instance["depot"]] + route2 + [instance["depot"]]
+
+    return sol
+
+
+# =====================================================
+# Genetic Algorithm (Memetic CVRP)
+# =====================================================
 def genetic_algorithm(
     instance,
     dist,
@@ -93,16 +166,31 @@ def genetic_algorithm(
     start_time = time.time()
 
     for gen in range(generations):
-        fitnesses, costs = [], []
+        fitnesses = []
+        costs = []
 
         # ---------- Evaluation ----------
         for chrom in population:
-            sol = decode(chrom, instance)
+            try:
+                if not is_valid_chromosome(chrom, customers):
+                    chrom = repair_chromosome(customers)
 
-            # ✅ Local search (clé pour ~797)
-            sol = local_search_solution(sol, dist)
+                sol = decode(chrom, instance)
 
-            cost = solution_cost(sol, dist)
+                # intra-route
+                sol = local_search_solution(sol, dist)
+
+                # inter-route
+                if random.random() < 0.7:
+                    sol = relocate_move(sol, instance)
+                if random.random() < 0.4:
+                    sol = exchange_move(sol, instance)
+
+                cost = solution_cost(sol, dist)
+
+            except Exception:
+                cost = 1e12  # pénalité
+
             costs.append(cost)
             fitnesses.append(1.0 / (cost + 1e-9))
 
@@ -125,13 +213,16 @@ def genetic_algorithm(
             if random.random() < pm:
                 child = mutation(child)
 
-            # ✅ sécurité ضد PMX
             if not is_valid_chromosome(child, customers):
                 child = repair_chromosome(customers)
 
             new_population.append(child)
 
         population = new_population
-        history.append(min(costs))
+
+        if len(costs) > 0:
+            history.append(min(costs))
+        else:
+            history.append(best_cost)
 
     return best_chrom, best_cost, history, time.time() - start_time

@@ -2,169 +2,169 @@
   {
     "instance": "A-n32-k5",
     "method": "Tournament + OX + Swap",
-    "best_cost_best_run": 834.04,
-    "avg_best_cost_over_runs": 899.1,
-    "execution_time_best_run": 13.82
+    "best_cost_best_run": 826.47,
+    "avg_best_cost_over_runs": 874.64,
+    "execution_time_best_run": 46.89
   },
   {
     "instance": "A-n32-k5",
     "method": "Tournament + OX + Inversion",
-    "best_cost_best_run": 884.26,
-    "avg_best_cost_over_runs": 918.95,
-    "execution_time_best_run": 13.11
+    "best_cost_best_run": 797.45,
+    "avg_best_cost_over_runs": 860.24,
+    "execution_time_best_run": 41.8
   },
   {
     "instance": "A-n32-k5",
     "method": "Tournament + PMX + Swap",
-    "best_cost_best_run": 806.36,
-    "avg_best_cost_over_runs": 886.4,
-    "execution_time_best_run": 14.09
+    "best_cost_best_run": 823.55,
+    "avg_best_cost_over_runs": 861.04,
+    "execution_time_best_run": 48.15
   },
   {
     "instance": "A-n32-k5",
     "method": "Tournament + PMX + Inversion",
-    "best_cost_best_run": 851.7,
-    "avg_best_cost_over_runs": 924.25,
-    "execution_time_best_run": 12.76
+    "best_cost_best_run": 814.76,
+    "avg_best_cost_over_runs": 867.75,
+    "execution_time_best_run": 44.79
   },
   {
     "instance": "A-n32-k5",
     "method": "Roulette + OX + Swap",
-    "best_cost_best_run": 880.19,
-    "avg_best_cost_over_runs": 969.48,
-    "execution_time_best_run": 11.57
+    "best_cost_best_run": 832.43,
+    "avg_best_cost_over_runs": 867.0,
+    "execution_time_best_run": 41.44
   },
   {
     "instance": "A-n32-k5",
     "method": "Roulette + OX + Inversion",
-    "best_cost_best_run": 882.01,
-    "avg_best_cost_over_runs": 945.88,
-    "execution_time_best_run": 12.88
+    "best_cost_best_run": 805.5,
+    "avg_best_cost_over_runs": 838.75,
+    "execution_time_best_run": 42.49
   },
   {
     "instance": "A-n32-k5",
     "method": "Roulette + PMX + Swap",
-    "best_cost_best_run": 823.29,
-    "avg_best_cost_over_runs": 876.3,
-    "execution_time_best_run": 12.52
+    "best_cost_best_run": 803.31,
+    "avg_best_cost_over_runs": 844.15,
+    "execution_time_best_run": 38.34
   },
   {
     "instance": "A-n32-k5",
     "method": "Roulette + PMX + Inversion",
-    "best_cost_best_run": 808.81,
-    "avg_best_cost_over_runs": 933.32,
-    "execution_time_best_run": 11.77
+    "best_cost_best_run": 812.79,
+    "avg_best_cost_over_runs": 841.0,
+    "execution_time_best_run": 51.65
   },
   {
     "instance": "A-n32-k5",
     "method": "Rank + OX + Swap",
-    "best_cost_best_run": 799.64,
-    "avg_best_cost_over_runs": 848.72,
-    "execution_time_best_run": 12.11
+    "best_cost_best_run": 797.45,
+    "avg_best_cost_over_runs": 850.79,
+    "execution_time_best_run": 43.92
   },
   {
     "instance": "A-n32-k5",
     "method": "Rank + OX + Inversion",
-    "best_cost_best_run": 878.24,
-    "avg_best_cost_over_runs": 910.55,
-    "execution_time_best_run": 12.86
+    "best_cost_best_run": 805.22,
+    "avg_best_cost_over_runs": 834.54,
+    "execution_time_best_run": 43.24
   },
   {
     "instance": "A-n32-k5",
     "method": "Rank + PMX + Swap",
-    "best_cost_best_run": 823.49,
-    "avg_best_cost_over_runs": 882.84,
-    "execution_time_best_run": 13.55
+    "best_cost_best_run": 803.31,
+    "avg_best_cost_over_runs": 849.15,
+    "execution_time_best_run": 44.25
   },
   {
     "instance": "A-n32-k5",
     "method": "Rank + PMX + Inversion",
-    "best_cost_best_run": 845.08,
-    "avg_best_cost_over_runs": 909.53,
-    "execution_time_best_run": 12.8
+    "best_cost_best_run": 801.87,
+    "avg_best_cost_over_runs": 838.39,
+    "execution_time_best_run": 44.17
   },
   {
     "instance": "A-n32-k5",
     "method": "Uniform + OX + Swap",
-    "best_cost_best_run": 1092.34,
-    "avg_best_cost_over_runs": 1125.99,
-    "execution_time_best_run": 13.89
+    "best_cost_best_run": 812.79,
+    "avg_best_cost_over_runs": 858.47,
+    "execution_time_best_run": 44.16
   },
   {
     "instance": "A-n32-k5",
     "method": "Uniform + OX + Inversion",
-    "best_cost_best_run": 1021.56,
-    "avg_best_cost_over_runs": 1105.52,
-    "execution_time_best_run": 14.14
+    "best_cost_best_run": 832.67,
+    "avg_best_cost_over_runs": 881.46,
+    "execution_time_best_run": 46.08
   },
   {
     "instance": "A-n32-k5",
     "method": "Uniform + PMX + Swap",
-    "best_cost_best_run": 1049.59,
-    "avg_best_cost_over_runs": 1122.18,
-    "execution_time_best_run": 13.56
+    "best_cost_best_run": 805.5,
+    "avg_best_cost_over_runs": 865.29,
+    "execution_time_best_run": 54.67
   },
   {
     "instance": "A-n32-k5",
     "method": "Uniform + PMX + Inversion",
-    "best_cost_best_run": 1098.96,
-    "avg_best_cost_over_runs": 1127.32,
-    "execution_time_best_run": 13.58
+    "best_cost_best_run": 810.57,
+    "avg_best_cost_over_runs": 867.52,
+    "execution_time_best_run": 49.92
   },
   {
     "instance": "A-n32-k5",
     "method": "Deterministic + OX + Swap",
-    "best_cost_best_run": 805.5,
-    "avg_best_cost_over_runs": 891.07,
-    "execution_time_best_run": 14.24
+    "best_cost_best_run": 802.6,
+    "avg_best_cost_over_runs": 846.9,
+    "execution_time_best_run": 47.76
   },
   {
     "instance": "A-n32-k5",
     "method": "Deterministic + OX + Inversion",
-    "best_cost_best_run": 868.85,
-    "avg_best_cost_over_runs": 1023.97,
-    "execution_time_best_run": 14.75
+    "best_cost_best_run": 805.5,
+    "avg_best_cost_over_runs": 860.59,
+    "execution_time_best_run": 65.21
   },
   {
     "instance": "A-n32-k5",
     "method": "Deterministic + PMX + Swap",
-    "best_cost_best_run": 842.28,
-    "avg_best_cost_over_runs": 906.11,
-    "execution_time_best_run": 10.7
+    "best_cost_best_run": 797.45,
+    "avg_best_cost_over_runs": 833.09,
+    "execution_time_best_run": 49.7
   },
   {
     "instance": "A-n32-k5",
     "method": "Deterministic + PMX + Inversion",
-    "best_cost_best_run": 927.86,
-    "avg_best_cost_over_runs": 1037.0,
-    "execution_time_best_run": 11.51
+    "best_cost_best_run": 797.45,
+    "avg_best_cost_over_runs": 840.45,
+    "execution_time_best_run": 43.5
   },
   {
     "instance": "A-n32-k5",
     "method": "Remainder + OX + Swap",
-    "best_cost_best_run": 879.01,
-    "avg_best_cost_over_runs": 935.11,
-    "execution_time_best_run": 17.75
+    "best_cost_best_run": 797.45,
+    "avg_best_cost_over_runs": 849.87,
+    "execution_time_best_run": 44.1
   },
   {
     "instance": "A-n32-k5",
     "method": "Remainder + OX + Inversion",
-    "best_cost_best_run": 846.4,
-    "avg_best_cost_over_runs": 958.0,
-    "execution_time_best_run": 20.64
+    "best_cost_best_run": 829.41,
+    "avg_best_cost_over_runs": 869.11,
+    "execution_time_best_run": 47.66
   },
   {
     "instance": "A-n32-k5",
     "method": "Remainder + PMX + Swap",
-    "best_cost_best_run": 835.49,
-    "avg_best_cost_over_runs": 877.13,
-    "execution_time_best_run": 18.08
+    "best_cost_best_run": 801.87,
+    "avg_best_cost_over_runs": 873.08,
+    "execution_time_best_run": 51.45
   },
   {
     "instance": "A-n32-k5",
     "method": "Remainder + PMX + Inversion",
-    "best_cost_best_run": 844.29,
-    "avg_best_cost_over_runs": 937.6,
-    "execution_time_best_run": 19.6
+    "best_cost_best_run": 798.94,
+    "avg_best_cost_over_runs": 846.53,
+    "execution_time_best_run": 47.07
   }
 ]
