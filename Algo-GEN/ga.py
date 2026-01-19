@@ -140,10 +140,6 @@ def exchange_move(solution, instance):
 
     return sol
 
-
-# =====================================================
-# Genetic Algorithm (Memetic CVRP)
-# =====================================================
 def genetic_algorithm(
     instance,
     dist,
@@ -163,6 +159,7 @@ def genetic_algorithm(
     best_chrom = None
     history = []
 
+    no_improve = 0
     start_time = time.time()
 
     for gen in range(generations):
@@ -177,19 +174,20 @@ def genetic_algorithm(
 
                 sol = decode(chrom, instance)
 
-                # intra-route
-                sol = local_search_solution(sol, dist)
+                # Local search ONLY sometimes (huge speedup)
+                if gen % 5 == 0:
+                    sol = local_search_solution(sol, dist)
 
-                # inter-route
-                if random.random() < 0.7:
+                # Reduced inter-route moves
+                if random.random() < 0.3:
                     sol = relocate_move(sol, instance)
-                if random.random() < 0.4:
+                if random.random() < 0.15:
                     sol = exchange_move(sol, instance)
 
                 cost = solution_cost(sol, dist)
 
             except Exception:
-                cost = 1e12  # pénalité
+                cost = 1e12
 
             costs.append(cost)
             fitnesses.append(1.0 / (cost + 1e-9))
@@ -197,6 +195,14 @@ def genetic_algorithm(
             if cost < best_cost:
                 best_cost = cost
                 best_chrom = chrom[:]
+                no_improve = 0
+
+        history.append(min(costs))
+
+        # ---------- Early stopping ----------
+        no_improve += 1
+        if no_improve > 50:
+            break
 
         # ---------- Elitism ----------
         ranked = sorted(zip(population, costs), key=lambda x: x[1])
@@ -219,10 +225,5 @@ def genetic_algorithm(
             new_population.append(child)
 
         population = new_population
-
-        if len(costs) > 0:
-            history.append(min(costs))
-        else:
-            history.append(best_cost)
 
     return best_chrom, best_cost, history, time.time() - start_time

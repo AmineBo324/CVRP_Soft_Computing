@@ -1,0 +1,463 @@
+{
+  "best_combination": {
+    "method": "Tournament+PMX+Inversion",
+    "avg_best_cost": 1249.16,
+    "avg_avg_cost": 1308.38,
+    "overall_std": 442.39,
+    "feasible_count": 50,
+    "total_instances": 50,
+    "feasibility_rate": 100.0
+  },
+  "detailed_results": [
+    {
+      "instance": "A-n32-k5",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 940.38,
+      "avg_cost": 971.12,
+      "std_cost": 39.46,
+      "gap_from_optimal": 19.95,
+      "optimal": 784
+    },
+    {
+      "instance": "A-n33-k5",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 791.04,
+      "avg_cost": 815.4,
+      "std_cost": 23.3,
+      "gap_from_optimal": 19.67,
+      "optimal": 661
+    },
+    {
+      "instance": "A-n33-k6",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 776.97,
+      "avg_cost": 823.02,
+      "std_cost": 57.18,
+      "gap_from_optimal": 4.71,
+      "optimal": 742
+    },
+    {
+      "instance": "A-n34-k5",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 865.22,
+      "avg_cost": 886.37,
+      "std_cost": 17.26,
+      "gap_from_optimal": 11.21,
+      "optimal": 778
+    },
+    {
+      "instance": "A-n36-k5",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 911.94,
+      "avg_cost": 988.2,
+      "std_cost": 69.36,
+      "gap_from_optimal": 14.13,
+      "optimal": 799
+    },
+    {
+      "instance": "A-n37-k5",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 720.99,
+      "avg_cost": 797.5,
+      "std_cost": 72.27,
+      "gap_from_optimal": 7.77,
+      "optimal": 669
+    },
+    {
+      "instance": "A-n37-k6",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1079.96,
+      "avg_cost": 1143.55,
+      "std_cost": 86.46,
+      "gap_from_optimal": 13.8,
+      "optimal": 949
+    },
+    {
+      "instance": "A-n38-k5",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 808.45,
+      "avg_cost": 837.78,
+      "std_cost": 20.74,
+      "gap_from_optimal": 10.75,
+      "optimal": 730
+    },
+    {
+      "instance": "A-n39-k5",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 983.12,
+      "avg_cost": 1046.34,
+      "std_cost": 48.97,
+      "gap_from_optimal": 19.6,
+      "optimal": 822
+    },
+    {
+      "instance": "A-n39-k6",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 920.18,
+      "avg_cost": 995.32,
+      "std_cost": 70.09,
+      "gap_from_optimal": 10.73,
+      "optimal": 831
+    },
+    {
+      "instance": "A-n44-k6",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1074.02,
+      "avg_cost": 1119.5,
+      "std_cost": 47.98,
+      "gap_from_optimal": 14.62,
+      "optimal": 937
+    },
+    {
+      "instance": "A-n45-k6",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1135.0,
+      "avg_cost": 1154.34,
+      "std_cost": 24.65,
+      "gap_from_optimal": 20.23,
+      "optimal": 944
+    },
+    {
+      "instance": "A-n45-k7",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1355.22,
+      "avg_cost": 1388.44,
+      "std_cost": 39.37,
+      "gap_from_optimal": 18.26,
+      "optimal": 1146
+    },
+    {
+      "instance": "A-n46-k7",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1165.3,
+      "avg_cost": 1233.16,
+      "std_cost": 53.75,
+      "gap_from_optimal": 27.49,
+      "optimal": 914
+    },
+    {
+      "instance": "A-n48-k7",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1293.25,
+      "avg_cost": 1397.19,
+      "std_cost": 105.38,
+      "gap_from_optimal": 20.53,
+      "optimal": 1073
+    },
+    {
+      "instance": "A-n53-k7",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1354.28,
+      "avg_cost": 1429.75,
+      "std_cost": 59.23,
+      "gap_from_optimal": 34.09,
+      "optimal": 1010
+    },
+    {
+      "instance": "A-n54-k7",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1360.13,
+      "avg_cost": 1415.18,
+      "std_cost": 42.27,
+      "gap_from_optimal": 16.55,
+      "optimal": 1167
+    },
+    {
+      "instance": "A-n55-k9",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1327.24,
+      "avg_cost": 1403.62,
+      "std_cost": 69.9,
+      "gap_from_optimal": 23.69,
+      "optimal": 1073
+    },
+    {
+      "instance": "A-n60-k9",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1735.19,
+      "avg_cost": 1804.52,
+      "std_cost": 64.72,
+      "gap_from_optimal": 28.15,
+      "optimal": 1354
+    },
+    {
+      "instance": "A-n61-k9",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1409.34,
+      "avg_cost": 1456.81,
+      "std_cost": 52.4,
+      "gap_from_optimal": 36.3,
+      "optimal": 1034
+    },
+    {
+      "instance": "A-n62-k8",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1754.68,
+      "avg_cost": 1788.25,
+      "std_cost": 32.56,
+      "gap_from_optimal": 36.23,
+      "optimal": 1288
+    },
+    {
+      "instance": "A-n63-k10",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1711.75,
+      "avg_cost": 1782.92,
+      "std_cost": 80.95,
+      "gap_from_optimal": 30.27,
+      "optimal": 1314
+    },
+    {
+      "instance": "A-n63-k9",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 2074.31,
+      "avg_cost": 2117.95,
+      "std_cost": 38.49,
+      "gap_from_optimal": 28.36,
+      "optimal": 1616
+    },
+    {
+      "instance": "A-n64-k9",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1894.36,
+      "avg_cost": 1916.76,
+      "std_cost": 16.48,
+      "gap_from_optimal": 35.21,
+      "optimal": 1401
+    },
+    {
+      "instance": "A-n65-k9",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1554.04,
+      "avg_cost": 1680.0,
+      "std_cost": 89.26,
+      "gap_from_optimal": 32.37,
+      "optimal": 1174
+    },
+    {
+      "instance": "A-n69-k9",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1631.03,
+      "avg_cost": 1665.27,
+      "std_cost": 29.49,
+      "gap_from_optimal": 40.73,
+      "optimal": 1159
+    },
+    {
+      "instance": "A-n80-k10",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 2491.33,
+      "avg_cost": 2582.15,
+      "std_cost": 85.24,
+      "gap_from_optimal": 41.31,
+      "optimal": 1763
+    },
+    {
+      "instance": "B-n31-k5",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 706.89,
+      "avg_cost": 739.46,
+      "std_cost": 27.53,
+      "gap_from_optimal": 5.19,
+      "optimal": 672
+    },
+    {
+      "instance": "B-n34-k5",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 851.03,
+      "avg_cost": 890.08,
+      "std_cost": 32.92,
+      "gap_from_optimal": 8.0,
+      "optimal": 788
+    },
+    {
+      "instance": "B-n35-k5",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1024.91,
+      "avg_cost": 1036.91,
+      "std_cost": 8.84,
+      "gap_from_optimal": 7.32,
+      "optimal": 955
+    },
+    {
+      "instance": "B-n38-k6",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 896.07,
+      "avg_cost": 911.91,
+      "std_cost": 14.22,
+      "gap_from_optimal": 11.31,
+      "optimal": 805
+    },
+    {
+      "instance": "B-n39-k5",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 632.51,
+      "avg_cost": 721.54,
+      "std_cost": 67.0,
+      "gap_from_optimal": 15.21,
+      "optimal": 549
+    },
+    {
+      "instance": "B-n41-k6",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 931.76,
+      "avg_cost": 972.12,
+      "std_cost": 50.14,
+      "gap_from_optimal": 12.4,
+      "optimal": 829
+    },
+    {
+      "instance": "B-n43-k6",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 869.78,
+      "avg_cost": 932.54,
+      "std_cost": 45.64,
+      "gap_from_optimal": 17.22,
+      "optimal": 742
+    },
+    {
+      "instance": "B-n44-k7",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1095.11,
+      "avg_cost": 1124.36,
+      "std_cost": 37.12,
+      "gap_from_optimal": 20.47,
+      "optimal": 909
+    },
+    {
+      "instance": "B-n45-k5",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 861.07,
+      "avg_cost": 892.29,
+      "std_cost": 28.32,
+      "gap_from_optimal": 14.66,
+      "optimal": 751
+    },
+    {
+      "instance": "B-n45-k6",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 768.43,
+      "avg_cost": 837.92,
+      "std_cost": 54.37,
+      "gap_from_optimal": 13.34,
+      "optimal": 678
+    },
+    {
+      "instance": "B-n50-k7",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 904.51,
+      "avg_cost": 961.55,
+      "std_cost": 43.61,
+      "gap_from_optimal": 22.07,
+      "optimal": 741
+    },
+    {
+      "instance": "B-n50-k8",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1412.9,
+      "avg_cost": 1447.01,
+      "std_cost": 24.66,
+      "gap_from_optimal": 7.69,
+      "optimal": 1312
+    },
+    {
+      "instance": "B-n51-k7",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1256.96,
+      "avg_cost": 1378.76,
+      "std_cost": 122.49,
+      "gap_from_optimal": 21.8,
+      "optimal": 1032
+    },
+    {
+      "instance": "B-n52-k7",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 838.22,
+      "avg_cost": 961.19,
+      "std_cost": 97.04,
+      "gap_from_optimal": 12.21,
+      "optimal": 747
+    },
+    {
+      "instance": "B-n56-k7",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 830.85,
+      "avg_cost": 937.54,
+      "std_cost": 77.74,
+      "gap_from_optimal": 17.52,
+      "optimal": 707
+    },
+    {
+      "instance": "B-n57-k7",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1560.8,
+      "avg_cost": 1589.65,
+      "std_cost": 22.69,
+      "gap_from_optimal": 35.37,
+      "optimal": 1153
+    },
+    {
+      "instance": "B-n57-k9",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1999.14,
+      "avg_cost": 2024.95,
+      "std_cost": 18.39,
+      "gap_from_optimal": 25.1,
+      "optimal": 1598
+    },
+    {
+      "instance": "B-n63-k10",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 2010.63,
+      "avg_cost": 2033.79,
+      "std_cost": 20.97,
+      "gap_from_optimal": 34.4,
+      "optimal": 1496
+    },
+    {
+      "instance": "B-n64-k9",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1188.26,
+      "avg_cost": 1224.24,
+      "std_cost": 32.09,
+      "gap_from_optimal": 38.01,
+      "optimal": 861
+    },
+    {
+      "instance": "B-n66-k9",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1733.06,
+      "avg_cost": 1850.36,
+      "std_cost": 101.78,
+      "gap_from_optimal": 31.69,
+      "optimal": 1316
+    },
+    {
+      "instance": "B-n67-k10",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1498.5,
+      "avg_cost": 1534.52,
+      "std_cost": 42.24,
+      "gap_from_optimal": 45.2,
+      "optimal": 1032
+    },
+    {
+      "instance": "B-n68-k9",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1700.89,
+      "avg_cost": 1850.74,
+      "std_cost": 105.97,
+      "gap_from_optimal": 33.72,
+      "optimal": 1272
+    },
+    {
+      "instance": "B-n78-k10",
+      "method": "Tournament+PMX+Inversion",
+      "best_cost": 1767.12,
+      "avg_cost": 1925.29,
+      "std_cost": 113.37,
+      "gap_from_optimal": 44.73,
+      "optimal": 1221
+    }
+  ]
+}

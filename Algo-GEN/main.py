@@ -106,8 +106,7 @@ for idx, (name, sel, cross, mut) in enumerate(experiments, 1):
         mutation=swap_mutation,
         pop_size=120,
         generations=600,
-        px=0.9,
-        pm=0.25
+        px=0.9
 )
 
 

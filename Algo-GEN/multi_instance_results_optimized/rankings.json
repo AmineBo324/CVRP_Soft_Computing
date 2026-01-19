@@ -1,0 +1,110 @@
+[
+  {
+    "method": "Tournament+PMX+Inversion",
+    "avg_best_cost": 1249.16,
+    "avg_avg_cost": 1308.38,
+    "overall_std": 442.39,
+    "feasible_count": 50,
+    "total_instances": 50,
+    "feasibility_rate": 100.0
+  },
+  {
+    "method": "Rank+OX+Inversion",
+    "avg_best_cost": 1251.64,
+    "avg_avg_cost": 1310.27,
+    "overall_std": 446.45,
+    "feasible_count": 50,
+    "total_instances": 50,
+    "feasibility_rate": 100.0
+  },
+  {
+    "method": "Tournament+OX+Inversion",
+    "avg_best_cost": 1258.53,
+    "avg_avg_cost": 1320.46,
+    "overall_std": 440.81,
+    "feasible_count": 50,
+    "total_instances": 50,
+    "feasibility_rate": 100.0
+  },
+  {
+    "method": "Rank+PMX+Inversion",
+    "avg_best_cost": 1263.44,
+    "avg_avg_cost": 1325.27,
+    "overall_std": 453.13,
+    "feasible_count": 50,
+    "total_instances": 50,
+    "feasibility_rate": 100.0
+  },
+  {
+    "method": "Tournament+OX+Swap",
+    "avg_best_cost": 1275.91,
+    "avg_avg_cost": 1336.4,
+    "overall_std": 424.71,
+    "feasible_count": 50,
+    "total_instances": 50,
+    "feasibility_rate": 100.0
+  },
+  {
+    "method": "Rank+OX+Swap",
+    "avg_best_cost": 1278.18,
+    "avg_avg_cost": 1338.13,
+    "overall_std": 432.01,
+    "feasible_count": 50,
+    "total_instances": 50,
+    "feasibility_rate": 100.0
+  },
+  {
+    "method": "Rank+PMX+Swap",
+    "avg_best_cost": 1284.48,
+    "avg_avg_cost": 1344.95,
+    "overall_std": 431.37,
+    "feasible_count": 50,
+    "total_instances": 50,
+    "feasibility_rate": 100.0
+  },
+  {
+    "method": "Tournament+PMX+Swap",
+    "avg_best_cost": 1296.67,
+    "avg_avg_cost": 1350.66,
+    "overall_std": 426.99,
+    "feasible_count": 50,
+    "total_instances": 50,
+    "feasibility_rate": 100.0
+  },
+  {
+    "method": "Roulette+PMX+Swap",
+    "avg_best_cost": 1396.31,
+    "avg_avg_cost": 1468.8,
+    "overall_std": 502.5,
+    "feasible_count": 50,
+    "total_instances": 50,
+    "feasibility_rate": 100.0
+  },
+  {
+    "method": "Roulette+PMX+Inversion",
+    "avg_best_cost": 1471.58,
+    "avg_avg_cost": 1536.1,
+    "overall_std": 510.1,
+    "feasible_count": 50,
+    "total_instances": 50,
+    "feasibility_rate": 100.0
+  },
+  {
+    "method": "Roulette+OX+Inversion",
+    "avg_best_cost": 1472.47,
+    "avg_avg_cost": 1537.31,
+    "overall_std": 521.65,
+    "feasible_count": 50,
+    "total_instances": 50,
+    "feasibility_rate": 100.0
+  },
+  {
+    "method": "Roulette+OX+Swap",
+    "avg_best_cost": 1484.66,
+    "avg_avg_cost": 1545.85,
+    "overall_std": 515.61,
+    "feasible_count": 50,
+    "total_instances": 50,
+    "feasibility_rate": 100.0
+  }
+]
