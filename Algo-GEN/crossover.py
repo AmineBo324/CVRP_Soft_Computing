@@ -23,24 +23,27 @@ def pmx_crossover(p1, p2):
 
     a, b = sorted(random.sample(range(size), 2))
 
-    # Copy segment
+    # 1) copy segment from parent 1
     c1[a:b] = p1[a:b]
 
-    # Mapping
+    # 2) mapping
     for i in range(a, b):
         if p2[i] not in c1:
-            pos = i
             val = p2[i]
-            while True:
-                pos = p1.index(val)
-                if c1[pos] is None:
-                    c1[pos] = p2[i]
-                    break
-                val = p2[pos]
+            pos = i
 
-    # Fill remaining
+            while True:
+                mapped = p1[pos]
+                pos = p2.index(mapped)
+
+                if c1[pos] is None:
+                    c1[pos] = val
+                    break
+
+    # 3) fill remaining positions
     for i in range(size):
         if c1[i] is None:
             c1[i] = p2[i]
 
     return c1
+

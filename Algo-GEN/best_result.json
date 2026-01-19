@@ -1,7 +1,7 @@
 {
   "instance": "A-n32-k5",
-  "method": "Deterministic + PMX + Inversion",
-  "best_cost": 860.44,
-  "execution_time": 0.23,
-  "feasible": true
+  "method": "Rank + OX + Swap",
+  "best_cost_best_run": 799.64,
+  "avg_best_cost_over_runs": 848.72,
+  "execution_time_best_run": 12.11
 }
