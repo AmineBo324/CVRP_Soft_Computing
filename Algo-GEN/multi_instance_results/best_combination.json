@@ -1,0 +1,415 @@
+{
+  "best_combination": {
+    "method": "Tournament+OX+Inversion",
+    "avg_cost": 1316.91,
+    "avg_time": 0.89,
+    "feasible_count": 50,
+    "total_instances": 50,
+    "feasibility_rate": 100.0,
+    "min_cost": 567.86,
+    "max_cost": 2642.77,
+    "std_cost": 462.66
+  },
+  "detailed_results": [
+    {
+      "instance": "A-n32-k5",
+      "instance_file": "A-n32-k5.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 905.59,
+      "execution_time": 0.51,
+      "feasible": true
+    },
+    {
+      "instance": "A-n33-k5",
+      "instance_file": "A-n33-k5.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 762.19,
+      "execution_time": 0.54,
+      "feasible": true
+    },
+    {
+      "instance": "A-n33-k6",
+      "instance_file": "A-n33-k6.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 792.6,
+      "execution_time": 0.54,
+      "feasible": true
+    },
+    {
+      "instance": "A-n34-k5",
+      "instance_file": "A-n34-k5.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 873.36,
+      "execution_time": 0.57,
+      "feasible": true
+    },
+    {
+      "instance": "A-n36-k5",
+      "instance_file": "A-n36-k5.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1066.16,
+      "execution_time": 0.57,
+      "feasible": true
+    },
+    {
+      "instance": "A-n37-k5",
+      "instance_file": "A-n37-k5.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 890.54,
+      "execution_time": 0.58,
+      "feasible": true
+    },
+    {
+      "instance": "A-n37-k6",
+      "instance_file": "A-n37-k6.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1059.98,
+      "execution_time": 0.59,
+      "feasible": true
+    },
+    {
+      "instance": "A-n38-k5",
+      "instance_file": "A-n38-k5.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 826.99,
+      "execution_time": 0.6,
+      "feasible": true
+    },
+    {
+      "instance": "A-n39-k5",
+      "instance_file": "A-n39-k5.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1004.14,
+      "execution_time": 0.61,
+      "feasible": true
+    },
+    {
+      "instance": "A-n39-k6",
+      "instance_file": "A-n39-k6.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1068.32,
+      "execution_time": 0.63,
+      "feasible": true
+    },
+    {
+      "instance": "A-n44-k6",
+      "instance_file": "A-n44-k6.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1195.71,
+      "execution_time": 0.69,
+      "feasible": true
+    },
+    {
+      "instance": "A-n45-k6",
+      "instance_file": "A-n45-k6.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1173.37,
+      "execution_time": 0.71,
+      "feasible": true
+    },
+    {
+      "instance": "A-n45-k7",
+      "instance_file": "A-n45-k7.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1491.97,
+      "execution_time": 0.71,
+      "feasible": true
+    },
+    {
+      "instance": "A-n46-k7",
+      "instance_file": "A-n46-k7.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1130.71,
+      "execution_time": 0.74,
+      "feasible": true
+    },
+    {
+      "instance": "A-n48-k7",
+      "instance_file": "A-n48-k7.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1448.84,
+      "execution_time": 0.76,
+      "feasible": true
+    },
+    {
+      "instance": "A-n53-k7",
+      "instance_file": "A-n53-k7.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1375.53,
+      "execution_time": 0.84,
+      "feasible": true
+    },
+    {
+      "instance": "A-n54-k7",
+      "instance_file": "A-n54-k7.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1531.8,
+      "execution_time": 0.84,
+      "feasible": true
+    },
+    {
+      "instance": "A-n55-k9",
+      "instance_file": "A-n55-k9.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1516.03,
+      "execution_time": 1.05,
+      "feasible": true
+    },
+    {
+      "instance": "A-n60-k9",
+      "instance_file": "A-n60-k9.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1841.35,
+      "execution_time": 1.2,
+      "feasible": true
+    },
+    {
+      "instance": "A-n61-k9",
+      "instance_file": "A-n61-k9.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1452.24,
+      "execution_time": 1.39,
+      "feasible": true
+    },
+    {
+      "instance": "A-n62-k8",
+      "instance_file": "A-n62-k8.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1901.04,
+      "execution_time": 1.25,
+      "feasible": true
+    },
+    {
+      "instance": "A-n63-k10",
+      "instance_file": "A-n63-k10.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1810.45,
+      "execution_time": 1.42,
+      "feasible": true
+    },
+    {
+      "instance": "A-n63-k9",
+      "instance_file": "A-n63-k9.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 2165.62,
+      "execution_time": 1.4,
+      "feasible": true
+    },
+    {
+      "instance": "A-n64-k9",
+      "instance_file": "A-n64-k9.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1960.65,
+      "execution_time": 1.49,
+      "feasible": true
+    },
+    {
+      "instance": "A-n65-k9",
+      "instance_file": "A-n65-k9.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1774.96,
+      "execution_time": 1.06,
+      "feasible": true
+    },
+    {
+      "instance": "A-n69-k9",
+      "instance_file": "A-n69-k9.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1836.51,
+      "execution_time": 1.12,
+      "feasible": true
+    },
+    {
+      "instance": "A-n80-k10",
+      "instance_file": "A-n80-k10.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 2642.77,
+      "execution_time": 1.37,
+      "feasible": true
+    },
+    {
+      "instance": "B-n31-k5",
+      "instance_file": "B-n31-k5.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 719.38,
+      "execution_time": 0.49,
+      "feasible": true
+    },
+    {
+      "instance": "B-n34-k5",
+      "instance_file": "B-n34-k5.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 808.53,
+      "execution_time": 0.54,
+      "feasible": true
+    },
+    {
+      "instance": "B-n35-k5",
+      "instance_file": "B-n35-k5.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 998.29,
+      "execution_time": 0.55,
+      "feasible": true
+    },
+    {
+      "instance": "B-n38-k6",
+      "instance_file": "B-n38-k6.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 875.32,
+      "execution_time": 0.6,
+      "feasible": true
+    },
+    {
+      "instance": "B-n39-k5",
+      "instance_file": "B-n39-k5.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 567.86,
+      "execution_time": 0.59,
+      "feasible": true
+    },
+    {
+      "instance": "B-n41-k6",
+      "instance_file": "B-n41-k6.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 977.45,
+      "execution_time": 0.64,
+      "feasible": true
+    },
+    {
+      "instance": "B-n43-k6",
+      "instance_file": "B-n43-k6.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 808.88,
+      "execution_time": 0.68,
+      "feasible": true
+    },
+    {
+      "instance": "B-n44-k7",
+      "instance_file": "B-n44-k7.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1159.22,
+      "execution_time": 0.69,
+      "feasible": true
+    },
+    {
+      "instance": "B-n45-k5",
+      "instance_file": "B-n45-k5.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 867.86,
+      "execution_time": 0.73,
+      "feasible": true
+    },
+    {
+      "instance": "B-n45-k6",
+      "instance_file": "B-n45-k6.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 845.94,
+      "execution_time": 0.73,
+      "feasible": true
+    },
+    {
+      "instance": "B-n50-k7",
+      "instance_file": "B-n50-k7.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 994.33,
+      "execution_time": 0.78,
+      "feasible": true
+    },
+    {
+      "instance": "B-n50-k8",
+      "instance_file": "B-n50-k8.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1587.29,
+      "execution_time": 0.78,
+      "feasible": true
+    },
+    {
+      "instance": "B-n51-k7",
+      "instance_file": "B-n51-k7.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1324.87,
+      "execution_time": 0.8,
+      "feasible": true
+    },
+    {
+      "instance": "B-n52-k7",
+      "instance_file": "B-n52-k7.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1060.64,
+      "execution_time": 0.81,
+      "feasible": true
+    },
+    {
+      "instance": "B-n56-k7",
+      "instance_file": "B-n56-k7.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 943.23,
+      "execution_time": 0.86,
+      "feasible": true
+    },
+    {
+      "instance": "B-n57-k7",
+      "instance_file": "B-n57-k7.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1521.98,
+      "execution_time": 0.92,
+      "feasible": true
+    },
+    {
+      "instance": "B-n57-k9",
+      "instance_file": "B-n57-k9.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 2022.71,
+      "execution_time": 0.89,
+      "feasible": true
+    },
+    {
+      "instance": "B-n63-k10",
+      "instance_file": "B-n63-k10.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 2141.52,
+      "execution_time": 1.21,
+      "feasible": true
+    },
+    {
+      "instance": "B-n64-k9",
+      "instance_file": "B-n64-k9.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1334.77,
+      "execution_time": 1.33,
+      "feasible": true
+    },
+    {
+      "instance": "B-n66-k9",
+      "instance_file": "B-n66-k9.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1720.75,
+      "execution_time": 1.35,
+      "feasible": true
+    },
+    {
+      "instance": "B-n67-k10",
+      "instance_file": "B-n67-k10.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1418.64,
+      "execution_time": 1.55,
+      "feasible": true
+    },
+    {
+      "instance": "B-n68-k9",
+      "instance_file": "B-n68-k9.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1791.39,
+      "execution_time": 1.66,
+      "feasible": true
+    },
+    {
+      "instance": "B-n78-k10",
+      "instance_file": "B-n78-k10.vrp",
+      "method": "Tournament+OX+Inversion",
+      "best_cost": 1855.08,
+      "execution_time": 1.74,
+      "feasible": true
+    }
+  ]
+}

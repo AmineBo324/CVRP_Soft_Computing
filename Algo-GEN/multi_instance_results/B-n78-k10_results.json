@@ -1,0 +1,1682 @@
+[
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Tournament+OX+Swap|P100G400X0.85M0.2",
+    "operators": "Tournament+OX+Swap",
+    "parameters": {
+      "pop_size": 100,
+      "generations": 400,
+      "px": 0.85,
+      "pm": 0.2
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Tournament+OX+Swap|P120G600X0.9M0.25",
+    "operators": "Tournament+OX+Swap",
+    "parameters": {
+      "pop_size": 120,
+      "generations": 600,
+      "px": 0.9,
+      "pm": 0.25
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Tournament+OX+Swap|P150G800X0.9M0.3",
+    "operators": "Tournament+OX+Swap",
+    "parameters": {
+      "pop_size": 150,
+      "generations": 800,
+      "px": 0.9,
+      "pm": 0.3
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Tournament+OX+Swap|P80G500X0.8M0.35",
+    "operators": "Tournament+OX+Swap",
+    "parameters": {
+      "pop_size": 80,
+      "generations": 500,
+      "px": 0.8,
+      "pm": 0.35
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Tournament+OX+Swap|P200G600X0.95M0.15",
+    "operators": "Tournament+OX+Swap",
+    "parameters": {
+      "pop_size": 200,
+      "generations": 600,
+      "px": 0.95,
+      "pm": 0.15
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Tournament+OX+Inversion|P100G400X0.85M0.2",
+    "operators": "Tournament+OX+Inversion",
+    "parameters": {
+      "pop_size": 100,
+      "generations": 400,
+      "px": 0.85,
+      "pm": 0.2
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Tournament+OX+Inversion|P120G600X0.9M0.25",
+    "operators": "Tournament+OX+Inversion",
+    "parameters": {
+      "pop_size": 120,
+      "generations": 600,
+      "px": 0.9,
+      "pm": 0.25
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Tournament+OX+Inversion|P150G800X0.9M0.3",
+    "operators": "Tournament+OX+Inversion",
+    "parameters": {
+      "pop_size": 150,
+      "generations": 800,
+      "px": 0.9,
+      "pm": 0.3
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Tournament+OX+Inversion|P80G500X0.8M0.35",
+    "operators": "Tournament+OX+Inversion",
+    "parameters": {
+      "pop_size": 80,
+      "generations": 500,
+      "px": 0.8,
+      "pm": 0.35
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Tournament+OX+Inversion|P200G600X0.95M0.15",
+    "operators": "Tournament+OX+Inversion",
+    "parameters": {
+      "pop_size": 200,
+      "generations": 600,
+      "px": 0.95,
+      "pm": 0.15
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Tournament+PMX+Swap|P100G400X0.85M0.2",
+    "operators": "Tournament+PMX+Swap",
+    "parameters": {
+      "pop_size": 100,
+      "generations": 400,
+      "px": 0.85,
+      "pm": 0.2
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Tournament+PMX+Swap|P120G600X0.9M0.25",
+    "operators": "Tournament+PMX+Swap",
+    "parameters": {
+      "pop_size": 120,
+      "generations": 600,
+      "px": 0.9,
+      "pm": 0.25
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Tournament+PMX+Swap|P150G800X0.9M0.3",
+    "operators": "Tournament+PMX+Swap",
+    "parameters": {
+      "pop_size": 150,
+      "generations": 800,
+      "px": 0.9,
+      "pm": 0.3
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Tournament+PMX+Swap|P80G500X0.8M0.35",
+    "operators": "Tournament+PMX+Swap",
+    "parameters": {
+      "pop_size": 80,
+      "generations": 500,
+      "px": 0.8,
+      "pm": 0.35
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Tournament+PMX+Swap|P200G600X0.95M0.15",
+    "operators": "Tournament+PMX+Swap",
+    "parameters": {
+      "pop_size": 200,
+      "generations": 600,
+      "px": 0.95,
+      "pm": 0.15
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Tournament+PMX+Inversion|P100G400X0.85M0.2",
+    "operators": "Tournament+PMX+Inversion",
+    "parameters": {
+      "pop_size": 100,
+      "generations": 400,
+      "px": 0.85,
+      "pm": 0.2
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Tournament+PMX+Inversion|P120G600X0.9M0.25",
+    "operators": "Tournament+PMX+Inversion",
+    "parameters": {
+      "pop_size": 120,
+      "generations": 600,
+      "px": 0.9,
+      "pm": 0.25
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Tournament+PMX+Inversion|P150G800X0.9M0.3",
+    "operators": "Tournament+PMX+Inversion",
+    "parameters": {
+      "pop_size": 150,
+      "generations": 800,
+      "px": 0.9,
+      "pm": 0.3
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Tournament+PMX+Inversion|P80G500X0.8M0.35",
+    "operators": "Tournament+PMX+Inversion",
+    "parameters": {
+      "pop_size": 80,
+      "generations": 500,
+      "px": 0.8,
+      "pm": 0.35
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Tournament+PMX+Inversion|P200G600X0.95M0.15",
+    "operators": "Tournament+PMX+Inversion",
+    "parameters": {
+      "pop_size": 200,
+      "generations": 600,
+      "px": 0.95,
+      "pm": 0.15
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Roulette+OX+Swap|P100G400X0.85M0.2",
+    "operators": "Roulette+OX+Swap",
+    "parameters": {
+      "pop_size": 100,
+      "generations": 400,
+      "px": 0.85,
+      "pm": 0.2
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Roulette+OX+Swap|P120G600X0.9M0.25",
+    "operators": "Roulette+OX+Swap",
+    "parameters": {
+      "pop_size": 120,
+      "generations": 600,
+      "px": 0.9,
+      "pm": 0.25
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Roulette+OX+Swap|P150G800X0.9M0.3",
+    "operators": "Roulette+OX+Swap",
+    "parameters": {
+      "pop_size": 150,
+      "generations": 800,
+      "px": 0.9,
+      "pm": 0.3
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Roulette+OX+Swap|P80G500X0.8M0.35",
+    "operators": "Roulette+OX+Swap",
+    "parameters": {
+      "pop_size": 80,
+      "generations": 500,
+      "px": 0.8,
+      "pm": 0.35
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Roulette+OX+Swap|P200G600X0.95M0.15",
+    "operators": "Roulette+OX+Swap",
+    "parameters": {
+      "pop_size": 200,
+      "generations": 600,
+      "px": 0.95,
+      "pm": 0.15
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Roulette+OX+Inversion|P100G400X0.85M0.2",
+    "operators": "Roulette+OX+Inversion",
+    "parameters": {
+      "pop_size": 100,
+      "generations": 400,
+      "px": 0.85,
+      "pm": 0.2
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Roulette+OX+Inversion|P120G600X0.9M0.25",
+    "operators": "Roulette+OX+Inversion",
+    "parameters": {
+      "pop_size": 120,
+      "generations": 600,
+      "px": 0.9,
+      "pm": 0.25
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Roulette+OX+Inversion|P150G800X0.9M0.3",
+    "operators": "Roulette+OX+Inversion",
+    "parameters": {
+      "pop_size": 150,
+      "generations": 800,
+      "px": 0.9,
+      "pm": 0.3
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Roulette+OX+Inversion|P80G500X0.8M0.35",
+    "operators": "Roulette+OX+Inversion",
+    "parameters": {
+      "pop_size": 80,
+      "generations": 500,
+      "px": 0.8,
+      "pm": 0.35
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Roulette+OX+Inversion|P200G600X0.95M0.15",
+    "operators": "Roulette+OX+Inversion",
+    "parameters": {
+      "pop_size": 200,
+      "generations": 600,
+      "px": 0.95,
+      "pm": 0.15
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Roulette+PMX+Swap|P100G400X0.85M0.2",
+    "operators": "Roulette+PMX+Swap",
+    "parameters": {
+      "pop_size": 100,
+      "generations": 400,
+      "px": 0.85,
+      "pm": 0.2
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Roulette+PMX+Swap|P120G600X0.9M0.25",
+    "operators": "Roulette+PMX+Swap",
+    "parameters": {
+      "pop_size": 120,
+      "generations": 600,
+      "px": 0.9,
+      "pm": 0.25
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Roulette+PMX+Swap|P150G800X0.9M0.3",
+    "operators": "Roulette+PMX+Swap",
+    "parameters": {
+      "pop_size": 150,
+      "generations": 800,
+      "px": 0.9,
+      "pm": 0.3
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Roulette+PMX+Swap|P80G500X0.8M0.35",
+    "operators": "Roulette+PMX+Swap",
+    "parameters": {
+      "pop_size": 80,
+      "generations": 500,
+      "px": 0.8,
+      "pm": 0.35
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Roulette+PMX+Swap|P200G600X0.95M0.15",
+    "operators": "Roulette+PMX+Swap",
+    "parameters": {
+      "pop_size": 200,
+      "generations": 600,
+      "px": 0.95,
+      "pm": 0.15
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Roulette+PMX+Inversion|P100G400X0.85M0.2",
+    "operators": "Roulette+PMX+Inversion",
+    "parameters": {
+      "pop_size": 100,
+      "generations": 400,
+      "px": 0.85,
+      "pm": 0.2
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Roulette+PMX+Inversion|P120G600X0.9M0.25",
+    "operators": "Roulette+PMX+Inversion",
+    "parameters": {
+      "pop_size": 120,
+      "generations": 600,
+      "px": 0.9,
+      "pm": 0.25
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Roulette+PMX+Inversion|P150G800X0.9M0.3",
+    "operators": "Roulette+PMX+Inversion",
+    "parameters": {
+      "pop_size": 150,
+      "generations": 800,
+      "px": 0.9,
+      "pm": 0.3
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Roulette+PMX+Inversion|P80G500X0.8M0.35",
+    "operators": "Roulette+PMX+Inversion",
+    "parameters": {
+      "pop_size": 80,
+      "generations": 500,
+      "px": 0.8,
+      "pm": 0.35
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Roulette+PMX+Inversion|P200G600X0.95M0.15",
+    "operators": "Roulette+PMX+Inversion",
+    "parameters": {
+      "pop_size": 200,
+      "generations": 600,
+      "px": 0.95,
+      "pm": 0.15
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Rank+OX+Swap|P100G400X0.85M0.2",
+    "operators": "Rank+OX+Swap",
+    "parameters": {
+      "pop_size": 100,
+      "generations": 400,
+      "px": 0.85,
+      "pm": 0.2
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Rank+OX+Swap|P120G600X0.9M0.25",
+    "operators": "Rank+OX+Swap",
+    "parameters": {
+      "pop_size": 120,
+      "generations": 600,
+      "px": 0.9,
+      "pm": 0.25
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Rank+OX+Swap|P150G800X0.9M0.3",
+    "operators": "Rank+OX+Swap",
+    "parameters": {
+      "pop_size": 150,
+      "generations": 800,
+      "px": 0.9,
+      "pm": 0.3
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Rank+OX+Swap|P80G500X0.8M0.35",
+    "operators": "Rank+OX+Swap",
+    "parameters": {
+      "pop_size": 80,
+      "generations": 500,
+      "px": 0.8,
+      "pm": 0.35
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Rank+OX+Swap|P200G600X0.95M0.15",
+    "operators": "Rank+OX+Swap",
+    "parameters": {
+      "pop_size": 200,
+      "generations": 600,
+      "px": 0.95,
+      "pm": 0.15
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Rank+OX+Inversion|P100G400X0.85M0.2",
+    "operators": "Rank+OX+Inversion",
+    "parameters": {
+      "pop_size": 100,
+      "generations": 400,
+      "px": 0.85,
+      "pm": 0.2
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Rank+OX+Inversion|P120G600X0.9M0.25",
+    "operators": "Rank+OX+Inversion",
+    "parameters": {
+      "pop_size": 120,
+      "generations": 600,
+      "px": 0.9,
+      "pm": 0.25
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Rank+OX+Inversion|P150G800X0.9M0.3",
+    "operators": "Rank+OX+Inversion",
+    "parameters": {
+      "pop_size": 150,
+      "generations": 800,
+      "px": 0.9,
+      "pm": 0.3
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Rank+OX+Inversion|P80G500X0.8M0.35",
+    "operators": "Rank+OX+Inversion",
+    "parameters": {
+      "pop_size": 80,
+      "generations": 500,
+      "px": 0.8,
+      "pm": 0.35
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Rank+OX+Inversion|P200G600X0.95M0.15",
+    "operators": "Rank+OX+Inversion",
+    "parameters": {
+      "pop_size": 200,
+      "generations": 600,
+      "px": 0.95,
+      "pm": 0.15
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Rank+PMX+Swap|P100G400X0.85M0.2",
+    "operators": "Rank+PMX+Swap",
+    "parameters": {
+      "pop_size": 100,
+      "generations": 400,
+      "px": 0.85,
+      "pm": 0.2
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Rank+PMX+Swap|P120G600X0.9M0.25",
+    "operators": "Rank+PMX+Swap",
+    "parameters": {
+      "pop_size": 120,
+      "generations": 600,
+      "px": 0.9,
+      "pm": 0.25
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Rank+PMX+Swap|P150G800X0.9M0.3",
+    "operators": "Rank+PMX+Swap",
+    "parameters": {
+      "pop_size": 150,
+      "generations": 800,
+      "px": 0.9,
+      "pm": 0.3
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Rank+PMX+Swap|P80G500X0.8M0.35",
+    "operators": "Rank+PMX+Swap",
+    "parameters": {
+      "pop_size": 80,
+      "generations": 500,
+      "px": 0.8,
+      "pm": 0.35
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Rank+PMX+Swap|P200G600X0.95M0.15",
+    "operators": "Rank+PMX+Swap",
+    "parameters": {
+      "pop_size": 200,
+      "generations": 600,
+      "px": 0.95,
+      "pm": 0.15
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Rank+PMX+Inversion|P100G400X0.85M0.2",
+    "operators": "Rank+PMX+Inversion",
+    "parameters": {
+      "pop_size": 100,
+      "generations": 400,
+      "px": 0.85,
+      "pm": 0.2
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Rank+PMX+Inversion|P120G600X0.9M0.25",
+    "operators": "Rank+PMX+Inversion",
+    "parameters": {
+      "pop_size": 120,
+      "generations": 600,
+      "px": 0.9,
+      "pm": 0.25
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Rank+PMX+Inversion|P150G800X0.9M0.3",
+    "operators": "Rank+PMX+Inversion",
+    "parameters": {
+      "pop_size": 150,
+      "generations": 800,
+      "px": 0.9,
+      "pm": 0.3
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Rank+PMX+Inversion|P80G500X0.8M0.35",
+    "operators": "Rank+PMX+Inversion",
+    "parameters": {
+      "pop_size": 80,
+      "generations": 500,
+      "px": 0.8,
+      "pm": 0.35
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Rank+PMX+Inversion|P200G600X0.95M0.15",
+    "operators": "Rank+PMX+Inversion",
+    "parameters": {
+      "pop_size": 200,
+      "generations": 600,
+      "px": 0.95,
+      "pm": 0.15
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Uniform+OX+Swap|P100G400X0.85M0.2",
+    "operators": "Uniform+OX+Swap",
+    "parameters": {
+      "pop_size": 100,
+      "generations": 400,
+      "px": 0.85,
+      "pm": 0.2
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Uniform+OX+Swap|P120G600X0.9M0.25",
+    "operators": "Uniform+OX+Swap",
+    "parameters": {
+      "pop_size": 120,
+      "generations": 600,
+      "px": 0.9,
+      "pm": 0.25
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Uniform+OX+Swap|P150G800X0.9M0.3",
+    "operators": "Uniform+OX+Swap",
+    "parameters": {
+      "pop_size": 150,
+      "generations": 800,
+      "px": 0.9,
+      "pm": 0.3
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Uniform+OX+Swap|P80G500X0.8M0.35",
+    "operators": "Uniform+OX+Swap",
+    "parameters": {
+      "pop_size": 80,
+      "generations": 500,
+      "px": 0.8,
+      "pm": 0.35
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Uniform+OX+Swap|P200G600X0.95M0.15",
+    "operators": "Uniform+OX+Swap",
+    "parameters": {
+      "pop_size": 200,
+      "generations": 600,
+      "px": 0.95,
+      "pm": 0.15
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Uniform+OX+Inversion|P100G400X0.85M0.2",
+    "operators": "Uniform+OX+Inversion",
+    "parameters": {
+      "pop_size": 100,
+      "generations": 400,
+      "px": 0.85,
+      "pm": 0.2
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Uniform+OX+Inversion|P120G600X0.9M0.25",
+    "operators": "Uniform+OX+Inversion",
+    "parameters": {
+      "pop_size": 120,
+      "generations": 600,
+      "px": 0.9,
+      "pm": 0.25
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Uniform+OX+Inversion|P150G800X0.9M0.3",
+    "operators": "Uniform+OX+Inversion",
+    "parameters": {
+      "pop_size": 150,
+      "generations": 800,
+      "px": 0.9,
+      "pm": 0.3
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Uniform+OX+Inversion|P80G500X0.8M0.35",
+    "operators": "Uniform+OX+Inversion",
+    "parameters": {
+      "pop_size": 80,
+      "generations": 500,
+      "px": 0.8,
+      "pm": 0.35
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Uniform+OX+Inversion|P200G600X0.95M0.15",
+    "operators": "Uniform+OX+Inversion",
+    "parameters": {
+      "pop_size": 200,
+      "generations": 600,
+      "px": 0.95,
+      "pm": 0.15
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Uniform+PMX+Swap|P100G400X0.85M0.2",
+    "operators": "Uniform+PMX+Swap",
+    "parameters": {
+      "pop_size": 100,
+      "generations": 400,
+      "px": 0.85,
+      "pm": 0.2
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Uniform+PMX+Swap|P120G600X0.9M0.25",
+    "operators": "Uniform+PMX+Swap",
+    "parameters": {
+      "pop_size": 120,
+      "generations": 600,
+      "px": 0.9,
+      "pm": 0.25
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Uniform+PMX+Swap|P150G800X0.9M0.3",
+    "operators": "Uniform+PMX+Swap",
+    "parameters": {
+      "pop_size": 150,
+      "generations": 800,
+      "px": 0.9,
+      "pm": 0.3
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Uniform+PMX+Swap|P80G500X0.8M0.35",
+    "operators": "Uniform+PMX+Swap",
+    "parameters": {
+      "pop_size": 80,
+      "generations": 500,
+      "px": 0.8,
+      "pm": 0.35
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Uniform+PMX+Swap|P200G600X0.95M0.15",
+    "operators": "Uniform+PMX+Swap",
+    "parameters": {
+      "pop_size": 200,
+      "generations": 600,
+      "px": 0.95,
+      "pm": 0.15
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Uniform+PMX+Inversion|P100G400X0.85M0.2",
+    "operators": "Uniform+PMX+Inversion",
+    "parameters": {
+      "pop_size": 100,
+      "generations": 400,
+      "px": 0.85,
+      "pm": 0.2
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Uniform+PMX+Inversion|P120G600X0.9M0.25",
+    "operators": "Uniform+PMX+Inversion",
+    "parameters": {
+      "pop_size": 120,
+      "generations": 600,
+      "px": 0.9,
+      "pm": 0.25
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Uniform+PMX+Inversion|P150G800X0.9M0.3",
+    "operators": "Uniform+PMX+Inversion",
+    "parameters": {
+      "pop_size": 150,
+      "generations": 800,
+      "px": 0.9,
+      "pm": 0.3
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Uniform+PMX+Inversion|P80G500X0.8M0.35",
+    "operators": "Uniform+PMX+Inversion",
+    "parameters": {
+      "pop_size": 80,
+      "generations": 500,
+      "px": 0.8,
+      "pm": 0.35
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Uniform+PMX+Inversion|P200G600X0.95M0.15",
+    "operators": "Uniform+PMX+Inversion",
+    "parameters": {
+      "pop_size": 200,
+      "generations": 600,
+      "px": 0.95,
+      "pm": 0.15
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Deterministic+OX+Swap|P100G400X0.85M0.2",
+    "operators": "Deterministic+OX+Swap",
+    "parameters": {
+      "pop_size": 100,
+      "generations": 400,
+      "px": 0.85,
+      "pm": 0.2
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Deterministic+OX+Swap|P120G600X0.9M0.25",
+    "operators": "Deterministic+OX+Swap",
+    "parameters": {
+      "pop_size": 120,
+      "generations": 600,
+      "px": 0.9,
+      "pm": 0.25
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Deterministic+OX+Swap|P150G800X0.9M0.3",
+    "operators": "Deterministic+OX+Swap",
+    "parameters": {
+      "pop_size": 150,
+      "generations": 800,
+      "px": 0.9,
+      "pm": 0.3
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Deterministic+OX+Swap|P80G500X0.8M0.35",
+    "operators": "Deterministic+OX+Swap",
+    "parameters": {
+      "pop_size": 80,
+      "generations": 500,
+      "px": 0.8,
+      "pm": 0.35
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Deterministic+OX+Swap|P200G600X0.95M0.15",
+    "operators": "Deterministic+OX+Swap",
+    "parameters": {
+      "pop_size": 200,
+      "generations": 600,
+      "px": 0.95,
+      "pm": 0.15
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Deterministic+OX+Inversion|P100G400X0.85M0.2",
+    "operators": "Deterministic+OX+Inversion",
+    "parameters": {
+      "pop_size": 100,
+      "generations": 400,
+      "px": 0.85,
+      "pm": 0.2
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Deterministic+OX+Inversion|P120G600X0.9M0.25",
+    "operators": "Deterministic+OX+Inversion",
+    "parameters": {
+      "pop_size": 120,
+      "generations": 600,
+      "px": 0.9,
+      "pm": 0.25
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Deterministic+OX+Inversion|P150G800X0.9M0.3",
+    "operators": "Deterministic+OX+Inversion",
+    "parameters": {
+      "pop_size": 150,
+      "generations": 800,
+      "px": 0.9,
+      "pm": 0.3
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Deterministic+OX+Inversion|P80G500X0.8M0.35",
+    "operators": "Deterministic+OX+Inversion",
+    "parameters": {
+      "pop_size": 80,
+      "generations": 500,
+      "px": 0.8,
+      "pm": 0.35
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Deterministic+OX+Inversion|P200G600X0.95M0.15",
+    "operators": "Deterministic+OX+Inversion",
+    "parameters": {
+      "pop_size": 200,
+      "generations": 600,
+      "px": 0.95,
+      "pm": 0.15
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Deterministic+PMX+Swap|P100G400X0.85M0.2",
+    "operators": "Deterministic+PMX+Swap",
+    "parameters": {
+      "pop_size": 100,
+      "generations": 400,
+      "px": 0.85,
+      "pm": 0.2
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Deterministic+PMX+Swap|P120G600X0.9M0.25",
+    "operators": "Deterministic+PMX+Swap",
+    "parameters": {
+      "pop_size": 120,
+      "generations": 600,
+      "px": 0.9,
+      "pm": 0.25
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Deterministic+PMX+Swap|P150G800X0.9M0.3",
+    "operators": "Deterministic+PMX+Swap",
+    "parameters": {
+      "pop_size": 150,
+      "generations": 800,
+      "px": 0.9,
+      "pm": 0.3
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Deterministic+PMX+Swap|P80G500X0.8M0.35",
+    "operators": "Deterministic+PMX+Swap",
+    "parameters": {
+      "pop_size": 80,
+      "generations": 500,
+      "px": 0.8,
+      "pm": 0.35
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Deterministic+PMX+Swap|P200G600X0.95M0.15",
+    "operators": "Deterministic+PMX+Swap",
+    "parameters": {
+      "pop_size": 200,
+      "generations": 600,
+      "px": 0.95,
+      "pm": 0.15
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Deterministic+PMX+Inversion|P100G400X0.85M0.2",
+    "operators": "Deterministic+PMX+Inversion",
+    "parameters": {
+      "pop_size": 100,
+      "generations": 400,
+      "px": 0.85,
+      "pm": 0.2
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Deterministic+PMX+Inversion|P120G600X0.9M0.25",
+    "operators": "Deterministic+PMX+Inversion",
+    "parameters": {
+      "pop_size": 120,
+      "generations": 600,
+      "px": 0.9,
+      "pm": 0.25
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Deterministic+PMX+Inversion|P150G800X0.9M0.3",
+    "operators": "Deterministic+PMX+Inversion",
+    "parameters": {
+      "pop_size": 150,
+      "generations": 800,
+      "px": 0.9,
+      "pm": 0.3
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Deterministic+PMX+Inversion|P80G500X0.8M0.35",
+    "operators": "Deterministic+PMX+Inversion",
+    "parameters": {
+      "pop_size": 80,
+      "generations": 500,
+      "px": 0.8,
+      "pm": 0.35
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Deterministic+PMX+Inversion|P200G600X0.95M0.15",
+    "operators": "Deterministic+PMX+Inversion",
+    "parameters": {
+      "pop_size": 200,
+      "generations": 600,
+      "px": 0.95,
+      "pm": 0.15
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Remainder+OX+Swap|P100G400X0.85M0.2",
+    "operators": "Remainder+OX+Swap",
+    "parameters": {
+      "pop_size": 100,
+      "generations": 400,
+      "px": 0.85,
+      "pm": 0.2
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Remainder+OX+Swap|P120G600X0.9M0.25",
+    "operators": "Remainder+OX+Swap",
+    "parameters": {
+      "pop_size": 120,
+      "generations": 600,
+      "px": 0.9,
+      "pm": 0.25
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Remainder+OX+Swap|P150G800X0.9M0.3",
+    "operators": "Remainder+OX+Swap",
+    "parameters": {
+      "pop_size": 150,
+      "generations": 800,
+      "px": 0.9,
+      "pm": 0.3
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Remainder+OX+Swap|P80G500X0.8M0.35",
+    "operators": "Remainder+OX+Swap",
+    "parameters": {
+      "pop_size": 80,
+      "generations": 500,
+      "px": 0.8,
+      "pm": 0.35
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Remainder+OX+Swap|P200G600X0.95M0.15",
+    "operators": "Remainder+OX+Swap",
+    "parameters": {
+      "pop_size": 200,
+      "generations": 600,
+      "px": 0.95,
+      "pm": 0.15
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Remainder+OX+Inversion|P100G400X0.85M0.2",
+    "operators": "Remainder+OX+Inversion",
+    "parameters": {
+      "pop_size": 100,
+      "generations": 400,
+      "px": 0.85,
+      "pm": 0.2
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Remainder+OX+Inversion|P120G600X0.9M0.25",
+    "operators": "Remainder+OX+Inversion",
+    "parameters": {
+      "pop_size": 120,
+      "generations": 600,
+      "px": 0.9,
+      "pm": 0.25
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Remainder+OX+Inversion|P150G800X0.9M0.3",
+    "operators": "Remainder+OX+Inversion",
+    "parameters": {
+      "pop_size": 150,
+      "generations": 800,
+      "px": 0.9,
+      "pm": 0.3
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Remainder+OX+Inversion|P80G500X0.8M0.35",
+    "operators": "Remainder+OX+Inversion",
+    "parameters": {
+      "pop_size": 80,
+      "generations": 500,
+      "px": 0.8,
+      "pm": 0.35
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Remainder+OX+Inversion|P200G600X0.95M0.15",
+    "operators": "Remainder+OX+Inversion",
+    "parameters": {
+      "pop_size": 200,
+      "generations": 600,
+      "px": 0.95,
+      "pm": 0.15
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Remainder+PMX+Swap|P100G400X0.85M0.2",
+    "operators": "Remainder+PMX+Swap",
+    "parameters": {
+      "pop_size": 100,
+      "generations": 400,
+      "px": 0.85,
+      "pm": 0.2
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Remainder+PMX+Swap|P120G600X0.9M0.25",
+    "operators": "Remainder+PMX+Swap",
+    "parameters": {
+      "pop_size": 120,
+      "generations": 600,
+      "px": 0.9,
+      "pm": 0.25
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Remainder+PMX+Swap|P150G800X0.9M0.3",
+    "operators": "Remainder+PMX+Swap",
+    "parameters": {
+      "pop_size": 150,
+      "generations": 800,
+      "px": 0.9,
+      "pm": 0.3
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Remainder+PMX+Swap|P80G500X0.8M0.35",
+    "operators": "Remainder+PMX+Swap",
+    "parameters": {
+      "pop_size": 80,
+      "generations": 500,
+      "px": 0.8,
+      "pm": 0.35
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Remainder+PMX+Swap|P200G600X0.95M0.15",
+    "operators": "Remainder+PMX+Swap",
+    "parameters": {
+      "pop_size": 200,
+      "generations": 600,
+      "px": 0.95,
+      "pm": 0.15
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Remainder+PMX+Inversion|P100G400X0.85M0.2",
+    "operators": "Remainder+PMX+Inversion",
+    "parameters": {
+      "pop_size": 100,
+      "generations": 400,
+      "px": 0.85,
+      "pm": 0.2
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Remainder+PMX+Inversion|P120G600X0.9M0.25",
+    "operators": "Remainder+PMX+Inversion",
+    "parameters": {
+      "pop_size": 120,
+      "generations": 600,
+      "px": 0.9,
+      "pm": 0.25
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Remainder+PMX+Inversion|P150G800X0.9M0.3",
+    "operators": "Remainder+PMX+Inversion",
+    "parameters": {
+      "pop_size": 150,
+      "generations": 800,
+      "px": 0.9,
+      "pm": 0.3
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Remainder+PMX+Inversion|P80G500X0.8M0.35",
+    "operators": "Remainder+PMX+Inversion",
+    "parameters": {
+      "pop_size": 80,
+      "generations": 500,
+      "px": 0.8,
+      "pm": 0.35
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  },
+  {
+    "instance": "B-n78-k10",
+    "instance_file": "B-n78-k10.vrp",
+    "config": "Remainder+PMX+Inversion|P200G600X0.95M0.15",
+    "operators": "Remainder+PMX+Inversion",
+    "parameters": {
+      "pop_size": 200,
+      "generations": 600,
+      "px": 0.95,
+      "pm": 0.15
+    },
+    "best_cost": Infinity,
+    "feasible": false
+  }
+]
