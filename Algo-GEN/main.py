@@ -3,8 +3,10 @@ import matplotlib.pyplot as plt
 import json
 import sys
 import os
+
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from src.reader import read_cvrp_instance   
+
+from src.reader import read_cvrp_instance
 from src.cost import solution_cost
 from src.feasibility import is_solution_feasible
 from ga import genetic_algorithm, decode
@@ -23,11 +25,10 @@ from selection import (
 from crossover import order_crossover, pmx_crossover
 from mutation import swap_mutation, mutation_inversion
 
-# -----------------------------
 # Load instance
-# -----------------------------
 instance = read_cvrp_instance("../instances/A/A-n32-k5.vrp")
-# Wrappers pour les sélections qui attendent num_select
+
+# Wrappers for selections that expect num_select
 def deterministic_sel_wrapper(population, fitnesses):
     return deterministic_selection(population, fitnesses, num_select=len(population))
 
@@ -56,7 +57,7 @@ mutation_methods = [
     ("Inversion", mutation_inversion),
 ]
 
-# Générer toutes les combinaisons automatiquement
+# Generate all combinations
 experiments = []
 for sel_name, sel_func in selection_methods:
     for cross_name, cross_func in crossover_methods:
@@ -64,80 +65,131 @@ for sel_name, sel_func in selection_methods:
             name = f"{sel_name} + {cross_name} + {mut_name}"
             experiments.append((name, sel_func, cross_func, mut_func))
 
-print(f"Total experiments: {len(experiments)}")
+print(f"Total experiments: {len(experiments)}\n")
 
-
-results = {}  # for plotting
-best_overall = None  # store best combination
+results = {}
+best_overall = None
 best_json = None
+all_results = []   # ✅ This will store ALL 24 results
 
 # -----------------------------
 # Run all experiments
 # -----------------------------
-for name, sel, cross, mut in experiments:
-    print(f"Running: {name}")
+for idx, (name, sel, cross, mut) in enumerate(experiments, 1):
+    print(f"[{idx}/{len(experiments)}] Running: {name}")
     start_time = time.time()
 
-    # Run GA
-    best_chrom, best_cost, history, _ = genetic_algorithm(
-        instance,
-        selection=sel,
-        crossover=cross,
-        mutation=mut,
-        pop_size=80,
-        generations=200
-    )
+    try:
+        best_chrom, best_cost, history, _ = genetic_algorithm(
+            instance,
+            selection=sel,
+            crossover=cross,
+            mutation=mut,
+            pop_size=80,
+            generations=200
+        )
 
-    exec_time = time.time() - start_time
+        exec_time = time.time() - start_time
 
-    # Decode chromosome to routes
-    best_solution = decode(best_chrom, instance)
+        best_solution = decode(best_chrom, instance)
 
-    # Check feasibility
-    feasible = is_solution_feasible(
-        best_solution,
-        demands=instance["demands"],
-        capacity=instance["capacity"],
-        depot=instance["depot"]
-    )
+        feasible = is_solution_feasible(
+            best_solution,
+            demands=instance["demands"],
+            capacity=instance["capacity"],
+            depot=instance["depot"]
+        )
 
-    # Store history for plotting
-    results[name] = history
+        results[name] = history
 
-    # Prepare JSON output for this experiment
-    output = {
-        "instance": instance["name"],
-        "method": name,
-        "best_cost": round(best_cost, 2),
-        "execution_time": round(exec_time, 2),
-        "feasible": feasible
-    }
+        output = {
+            "instance": instance["name"],
+            "method": name,
+            "best_cost": round(best_cost, 2),
+            "execution_time": round(exec_time, 2),
+            "feasible": feasible
+        }
 
-    # Track overall best
-    if feasible and (best_overall is None or best_cost < best_overall["best_cost"]):
-        best_overall = output
+        # ✅ KEEP collecting all experiment results
+        all_results.append(output)
 
-    print(json.dumps(output, indent=2))
+        if feasible and (best_overall is None or best_cost < best_overall["best_cost"]):
+            best_overall = output
+            best_json = output.copy()
+
+        print(json.dumps(output, indent=2))
+
+    except Exception as e:
+        output = {
+            "instance": instance["name"],
+            "method": name,
+            "best_cost": float('inf'),
+            "execution_time": round(time.time() - start_time, 2),
+            "feasible": False
+        }
+        all_results.append(output)
+        print(json.dumps(output, indent=2))
+
+# -----------------------------
+# SAVE RESULTS (FIXED)
+# -----------------------------
+print("\n" + "=" * 70)
+print("SAVING RESULTS TO all_results.json")
+print("=" * 70)
+
+all_results_file = "all_results.json"
+
+# Load existing results safely
+existing_results = []
+if os.path.exists(all_results_file):
+    with open(all_results_file, "r") as f:
+        try:
+            existing_results = json.load(f)
+            if not isinstance(existing_results, list):
+                existing_results = [existing_results]
+        except json.JSONDecodeError:
+            existing_results = []
+
+# ✅ MERGE instead of overwrite
+existing_results.extend(all_results)
+
+with open(all_results_file, "w") as f:
+    json.dump(existing_results, f, indent=2)
+
+print(f"✅ Saved {len(all_results)} new results "
+      f"(Total: {len(existing_results)})")
+
+# Compatibility file (last run only)
+with open("result.json", "w") as f:
+    json.dump(all_results[-1], f, indent=2)
+
+# Best result
+if best_json:
+    with open("best_result.json", "w") as f:
+        json.dump(best_json, f, indent=2)
+    print("✅ Saved: best_result.json")
+
+# Print best combination
+if best_overall:
+    print("\nBest overall combination:")
+    print(json.dumps(best_overall, indent=2))
 
 # -----------------------------
 # Plot convergence
 # -----------------------------
+print("\n" + "=" * 70)
+print("GENERATING CONVERGENCE PLOT")
+print("=" * 70)
+
 for name, hist in results.items():
-    plt.plot(hist, label=name)
+    plt.plot(hist, label=name, alpha=0.7)
 
 plt.xlabel("Generation")
 plt.ylabel("Best Cost")
 plt.title(f"GA Convergence Comparison ({instance['name']})")
-plt.legend()
+plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left', fontsize=8)
 plt.grid(True)
+plt.tight_layout()
+plt.savefig("convergence_plot.png", dpi=150, bbox_inches='tight')
+print("✅ Saved: convergence_plot.png")
 plt.show()
-
-# -----------------------------
-# Output best combination in JSON
-# -----------------------------
-if best_overall:
-    print("\nBest overall combination:")
-    print(json.dumps(best_overall, indent=2))
-    # Save to file
-    with open("best_result.json", "w") as f:
-        json.dump(best_overall, f, indent=2)

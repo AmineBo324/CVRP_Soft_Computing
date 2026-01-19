@@ -1,0 +1,194 @@
+[
+  {
+    "instance": "A-n55-k9",
+    "instance_file": "A-n55-k9.vrp",
+    "method": "Tournament+OX+Swap",
+    "best_cost": 1496.92,
+    "execution_time": 0.9,
+    "feasible": true
+  },
+  {
+    "instance": "A-n55-k9",
+    "instance_file": "A-n55-k9.vrp",
+    "method": "Tournament+OX+Inversion",
+    "best_cost": 1516.03,
+    "execution_time": 1.05,
+    "feasible": true
+  },
+  {
+    "instance": "A-n55-k9",
+    "instance_file": "A-n55-k9.vrp",
+    "method": "Tournament+PMX+Swap",
+    "best_cost": 1517.3,
+    "execution_time": 1.05,
+    "feasible": true
+  },
+  {
+    "instance": "A-n55-k9",
+    "instance_file": "A-n55-k9.vrp",
+    "method": "Tournament+PMX+Inversion",
+    "best_cost": 1477.6,
+    "execution_time": 1.01,
+    "feasible": true
+  },
+  {
+    "instance": "A-n55-k9",
+    "instance_file": "A-n55-k9.vrp",
+    "method": "Roulette+OX+Swap",
+    "best_cost": 2055.6,
+    "execution_time": 1.14,
+    "feasible": true
+  },
+  {
+    "instance": "A-n55-k9",
+    "instance_file": "A-n55-k9.vrp",
+    "method": "Roulette+OX+Inversion",
+    "best_cost": 2014.85,
+    "execution_time": 1.15,
+    "feasible": true
+  },
+  {
+    "instance": "A-n55-k9",
+    "instance_file": "A-n55-k9.vrp",
+    "method": "Roulette+PMX+Swap",
+    "best_cost": 2434.2,
+    "execution_time": 1.01,
+    "feasible": true
+  },
+  {
+    "instance": "A-n55-k9",
+    "instance_file": "A-n55-k9.vrp",
+    "method": "Roulette+PMX+Inversion",
+    "best_cost": 2393.71,
+    "execution_time": 1.17,
+    "feasible": true
+  },
+  {
+    "instance": "A-n55-k9",
+    "instance_file": "A-n55-k9.vrp",
+    "method": "Rank+OX+Swap",
+    "best_cost": 1463.93,
+    "execution_time": 1.59,
+    "feasible": true
+  },
+  {
+    "instance": "A-n55-k9",
+    "instance_file": "A-n55-k9.vrp",
+    "method": "Rank+OX+Inversion",
+    "best_cost": 1600.09,
+    "execution_time": 1.5,
+    "feasible": true
+  },
+  {
+    "instance": "A-n55-k9",
+    "instance_file": "A-n55-k9.vrp",
+    "method": "Rank+PMX+Swap",
+    "best_cost": 1706.48,
+    "execution_time": 1.31,
+    "feasible": true
+  },
+  {
+    "instance": "A-n55-k9",
+    "instance_file": "A-n55-k9.vrp",
+    "method": "Rank+PMX+Inversion",
+    "best_cost": 2185.21,
+    "execution_time": 1.48,
+    "feasible": true
+  },
+  {
+    "instance": "A-n55-k9",
+    "instance_file": "A-n55-k9.vrp",
+    "method": "Uniform+OX+Swap",
+    "best_cost": 2457.56,
+    "execution_time": 2.74,
+    "feasible": true
+  },
+  {
+    "instance": "A-n55-k9",
+    "instance_file": "A-n55-k9.vrp",
+    "method": "Uniform+OX+Inversion",
+    "best_cost": 2505.33,
+    "execution_time": 2.96,
+    "feasible": true
+  },
+  {
+    "instance": "A-n55-k9",
+    "instance_file": "A-n55-k9.vrp",
+    "method": "Uniform+PMX+Swap",
+    "best_cost": 2530.11,
+    "execution_time": 2.09,
+    "feasible": true
+  },
+  {
+    "instance": "A-n55-k9",
+    "instance_file": "A-n55-k9.vrp",
+    "method": "Uniform+PMX+Inversion",
+    "best_cost": 2459.81,
+    "execution_time": 2.12,
+    "feasible": true
+  },
+  {
+    "instance": "A-n55-k9",
+    "instance_file": "A-n55-k9.vrp",
+    "method": "Deterministic+OX+Swap",
+    "best_cost": 1570.84,
+    "execution_time": 1.27,
+    "feasible": true
+  },
+  {
+    "instance": "A-n55-k9",
+    "instance_file": "A-n55-k9.vrp",
+    "method": "Deterministic+OX+Inversion",
+    "best_cost": 1588.36,
+    "execution_time": 1.13,
+    "feasible": true
+  },
+  {
+    "instance": "A-n55-k9",
+    "instance_file": "A-n55-k9.vrp",
+    "method": "Deterministic+PMX+Swap",
+    "best_cost": 1580.69,
+    "execution_time": 0.81,
+    "feasible": true
+  },
+  {
+    "instance": "A-n55-k9",
+    "instance_file": "A-n55-k9.vrp",
+    "method": "Deterministic+PMX+Inversion",
+    "best_cost": 1419.46,
+    "execution_time": 0.95,
+    "feasible": true
+  },
+  {
+    "instance": "A-n55-k9",
+    "instance_file": "A-n55-k9.vrp",
+    "method": "Remainder+OX+Swap",
+    "best_cost": 2001.45,
+    "execution_time": 5.04,
+    "feasible": true
+  },
+  {
+    "instance": "A-n55-k9",
+    "instance_file": "A-n55-k9.vrp",
+    "method": "Remainder+OX+Inversion",
+    "best_cost": 2126.7,
+    "execution_time": 4.88,
+    "feasible": true
+  },
+  {
+    "instance": "A-n55-k9",
+    "instance_file": "A-n55-k9.vrp",
+    "method": "Remainder+PMX+Swap",
+    "best_cost": 2507.06,
+    "execution_time": 4.94,
+    "feasible": true
+  },
+  {
+    "instance": "A-n55-k9",
+    "instance_file": "A-n55-k9.vrp",
+    "method": "Remainder+PMX+Inversion",
+    "best_cost": 2500.86,
+    "execution_time": 5.0,
+    "feasible": true
+  }
+]

@@ -1,7 +1,7 @@
 {
   "instance": "A-n32-k5",
-  "method": "Genetic Algorithm",
-  "best_cost": 1793.76,
-  "execution_time": 0.81,
+  "method": "Remainder + PMX + Inversion",
+  "best_cost": 1475.64,
+  "execution_time": 3.63,
   "feasible": true
 }

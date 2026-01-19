@@ -16,17 +16,53 @@ def roulette_wheel_selection(population, fitnesses):
             return chrom
 
 
-
+"""
 def deterministic_selection(population, fitnesses, num_select):
+    
+    #Deterministic selection: Select the top num_select individuals based on fitness (highest first).
+
     sorted_pop = sorted(zip(population, fitnesses), key=lambda x: x[1], reverse=True)
     return [ind for ind, fit in sorted_pop[:num_select]]
+"""
+
+"""
+FIXED DETERMINISTIC SELECTION
+Replace the deterministic_selection function in your selection.py file with this one.
+The previous version returned a list instead of individual chromosomes.
+"""
+
+def deterministic_selection(population, fitnesses, num_select=None):
+    """
+    Deterministic Selection: Return the best individual based on fitness.
+    This operator always selects the individual with the highest fitness.
+    
+    Args:
+        population: List of chromosomes
+        fitnesses: List of fitness values (higher is better)
+        num_select: Number of individuals to select (kept for compatibility)
+    
+    Returns:
+        Single best individual from population
+    """
+    if not population or not fitnesses:
+        return None
+    
+    # Find the index of the best individual
+    best_idx = max(range(len(fitnesses)), key=lambda i: fitnesses[i])
+    
+    # Return the best chromosome (single individual, not list)
+    return population[best_idx]
 
 def uniform_selection(population, num_select):
-
+    """
+    Uniform selection: Randomly select individuals uniformly, ignoring fitness.
+    """
     return random.sample(population, num_select)
 
 def rank_selection(population, fitnesses):
-
+    """
+    Rank-based selection: Assign probabilities linearly based on rank (best has highest prob).
+    """
     sorted_indices = sorted(range(len(fitnesses)), key=lambda i: fitnesses[i], reverse=True)
     ranks = [0] * len(population)
     for rank, idx in enumerate(sorted_indices):

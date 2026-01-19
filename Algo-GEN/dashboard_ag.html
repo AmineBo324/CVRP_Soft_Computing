@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GA-CVRP Results Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <style>
+        * { box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif; }
+        
+        .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%); }
+        
+        .stat-card { 
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+        }
+        .stat-card:hover { 
+            transform: translateY(-8px);
+            border-color: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+        
+        .chart-container { position: relative; height: 400px; margin-bottom: 1rem; }
+        
+        .glow-effect { 
+            filter: drop-shadow(0 0 8px rgba(6, 182, 212, 0.3));
+        }
+        
+        .card-container {
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            background: linear-gradient(135deg, rgba(30, 27, 75, 0.8), rgba(49, 46, 129, 0.5));
+            border-radius: 1rem;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in { animation: fadeIn 0.6s ease-out; }
+        
+        table tr { animation: fadeIn 0.6s ease-out; }
+    </style>
+</head>
+<body class="gradient-bg min-h-screen text-gray-100 p-4 md:p-8">
+    <div class="max-w-7xl mx-auto">
+        
+        <!-- Header -->
+        <div class="relative overflow-hidden mb-8 fade-in">
+            <div class="absolute inset-0 bg-gradient-to-r from-cyan-500/20 to-emerald-500/20 blur-3xl"></div>
+            <div class="card-container p-8 md:p-10 relative">
+                <div class="flex items-start justify-between">
+                    <div>
+                        <h1 class="text-4xl md:text-5xl font-bold mb-2 flex items-center gap-3 text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-emerald-400">
+                            <span>🧬</span> Genetic Algorithm CVRP
+                        </h1>
+                        <p class="text-gray-400 text-lg">Optimization Results Dashboard</p>
+                    </div>
+                </div>
+                
+                <div class="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div class="bg-cyan-500/10 border border-cyan-500/30 rounded-lg px-4 py-3 hover:bg-cyan-500/20 transition">
+                        <div class="text-xs text-cyan-400 uppercase font-semibold tracking-wider">Instance</div>
+                        <div class="text-xl font-bold text-white mt-1">A-n32-k5</div>
+                    </div>
+                    <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-lg px-4 py-3 hover:bg-emerald-500/20 transition">
+                        <div class="text-xs text-emerald-400 uppercase font-semibold tracking-wider">Results</div>
+                        <div class="text-xl font-bold text-white mt-1">74</div>
+                    </div>
+                    <div class="bg-violet-500/10 border border-violet-500/30 rounded-lg px-4 py-3 hover:bg-violet-500/20 transition">
+                        <div class="text-xs text-violet-400 uppercase font-semibold tracking-wider">Generations</div>
+                        <div class="text-xl font-bold text-white mt-1">200</div>
+                    </div>
+                    <div class="bg-rose-500/10 border border-rose-500/30 rounded-lg px-4 py-3 hover:bg-rose-500/20 transition">
+                        <div class="text-xs text-rose-400 uppercase font-semibold tracking-wider">Optimum</div>
+                        <div class="text-xl font-bold text-white mt-1">961</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- KPI Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-5 mb-8 fade-in">
+            <div class="stat-card bg-gradient-to-br from-emerald-500/20 to-teal-600/20 rounded-xl p-6 text-white">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="text-2xl">🏆</div>
+                    <div class="text-xs font-semibold bg-emerald-500/30 px-2 py-1 rounded-full text-emerald-300">TOP</div>
+                </div>
+                <div class="text-xs font-semibold mb-2 text-emerald-400 uppercase tracking-wider">Best Cost</div>
+                <div class="text-3xl font-bold mb-2">860.44</div>
+                <div class="text-sm text-gray-300 mb-3">Deterministic + PMX + Inversion</div>
+                <div class="text-xs bg-emerald-500/30 px-2 py-1 rounded inline-block text-emerald-300 font-semibold">
+                    Gap: -10.5%
+                </div>
+            </div>
+            
+            <div class="stat-card bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-xl p-6 text-white">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="text-2xl">📊</div>
+                    <div class="text-xs font-semibold bg-cyan-500/30 px-2 py-1 rounded-full text-cyan-300">AVG</div>
+                </div>
+                <div class="text-xs font-semibold mb-2 text-cyan-400 uppercase tracking-wider">Avg Cost</div>
+                <div class="text-3xl font-bold mb-2">1252.10</div>
+                <div class="text-sm text-gray-300">74 feasible</div>
+            </div>
+            
+            <div class="stat-card bg-gradient-to-br from-violet-500/20 to-purple-600/20 rounded-xl p-6 text-white">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="text-2xl">⚡</div>
+                    <div class="text-xs font-semibold bg-violet-500/30 px-2 py-1 rounded-full text-violet-300">TIME</div>
+                </div>
+                <div class="text-xs font-semibold mb-2 text-violet-400 uppercase tracking-wider">Avg Time</div>
+                <div class="text-3xl font-bold mb-2">0.65s</div>
+                <div class="text-sm text-gray-300">per experiment</div>
+            </div>
+            
+            <div class="stat-card bg-gradient-to-br from-rose-500/20 to-pink-600/20 rounded-xl p-6 text-white">
+                <div class="flex items-center justify-between mb-3">
+                    <div class="text-2xl">✅</div>
+                    <div class="text-xs font-semibold bg-rose-500/30 px-2 py-1 rounded-full text-rose-300">VALID</div>
+                </div>
+                <div class="text-xs font-semibold mb-2 text-rose-400 uppercase tracking-wider">Feasible</div>
+                <div class="text-3xl font-bold mb-2">74/74</div>
+                <div class="text-sm text-gray-300">solutions valid</div>
+            </div>
+        </div>
+        
+        <!-- Charts -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8 fade-in">
+            <div class="card-container p-8 rounded-xl">
+                <h2 class="text-2xl font-bold mb-6 text-white flex items-center gap-2">
+                    <span>📊</span> Cost Comparison
+                </h2>
+                <div class="chart-container">
+                    <canvas id="costChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="card-container p-8 rounded-xl">
+                <h2 class="text-2xl font-bold mb-6 text-white flex items-center gap-2">
+                    <span>⚡</span> Execution Time
+                </h2>
+                <div class="chart-container">
+                    <canvas id="timeChart"></canvas>
+                </div>
+            </div>
+        </div>
+        
+        <div class="card-container p-8 rounded-xl mb-8 fade-in">
+            <h2 class="text-2xl font-bold mb-6 text-white flex items-center gap-2">
+                <span>🎯</span> Gap to Optimum
+            </h2>
+            <div class="chart-container" style="height: 400px;">
+                <canvas id="gapChart"></canvas>
+            </div>
+        </div>
+        
+        <!-- Results Table -->
+        <div class="card-container p-8 rounded-xl mb-8 fade-in">
+            <h2 class="text-2xl font-bold mb-6 text-white flex items-center gap-2">
+                <span>📋</span> Detailed Results
+            </h2>
+            <div class="overflow-x-auto">
+                <table class="w-full text-sm">
+                    <thead>
+                        <tr class="border-b border-gray-700 text-gray-300">
+                            <th class="text-left py-4 px-4 font-semibold">Rank</th>
+                            <th class="text-left py-4 px-4 font-semibold">Method</th>
+                            <th class="text-right py-4 px-4 font-semibold">Cost</th>
+                            <th class="text-right py-4 px-4 font-semibold">Gap %</th>
+                            <th class="text-right py-4 px-4 font-semibold">Time (s)</th>
+                            <th class="text-center py-4 px-4 font-semibold">Valid</th>
+                        </tr>
+                    </thead>
+                    <tbody id="resultsTable" class="text-gray-100">
+                        <!-- Populated by JavaScript -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- Guide -->
+        <div class="card-container p-8 rounded-xl mb-8 fade-in">
+            <h2 class="text-2xl font-bold mb-6 text-white">📚 Interpretation Guide</h2>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="p-4 bg-cyan-500/10 border border-cyan-500/30 rounded-lg">
+                    <h3 class="font-semibold text-lg mb-3 text-cyan-400">🎯 Quality Metrics</h3>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><strong class="text-gray-100">Cost:</strong> Lower is better</li>
+                        <li><strong class="text-gray-100">Gap %:</strong> &lt;5% = Excellent</li>
+                        <li><strong class="text-gray-100">Valid:</strong> Meets all constraints</li>
+                    </ul>
+                </div>
+                <div class="p-4 bg-emerald-500/10 border border-emerald-500/30 rounded-lg">
+                    <h3 class="font-semibold text-lg mb-3 text-emerald-400">⚡ Performance</h3>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><strong class="text-gray-100">Time:</strong> Speed of GA</li>
+                        <li><strong class="text-gray-100">Cost:</strong> Solution quality</li>
+                        <li><strong class="text-gray-100">Gap %:</strong> Distance from optimum</li>
+                    </ul>
+                </div>
+                <div class="p-4 bg-rose-500/10 border border-rose-500/30 rounded-lg">
+                    <h3 class="font-semibold text-lg mb-3 text-rose-400">🏆 Top Performer</h3>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><strong class="text-gray-100">Method:</strong> Deterministic + PMX + Inversion</li>
+                        <li><strong class="text-gray-100">Cost:</strong> 860.44</li>
+                        <li><strong class="text-gray-100">Time:</strong> 0.23s</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="text-center text-gray-500 text-sm py-6 fade-in">
+            <p>Dashboard updated: <span class="text-gray-400 font-semibold">18/01/2026 15:02:55</span></p>
+            <p class="text-xs mt-2">Genetic Algorithm Dashboard | Data from all_results.json</p>
+        </div>
+    </div>
+    
+    <script>
+    
+        const allResults = [{"instance": "A-n32-k5", "method": "Remainder + PMX + Inversion", "best_cost": 1462.79, "execution_time": 1.18, "feasible": true, "gap_percent": 52.22}, {"instance": "A-n32-k5", "method": "Remainder + PMX + Inversion", "best_cost": 1591.41, "execution_time": 1.16, "feasible": true, "gap_percent": 65.6}, {"instance": "A-n32-k5", "method": "Tournament + OX + Swap", "best_cost": 1047.87, "execution_time": 0.31, "feasible": true, "gap_percent": 9.04}, {"instance": "A-n32-k5", "method": "Tournament + OX + Inversion", "best_cost": 938.71, "execution_time": 0.3, "feasible": true, "gap_percent": -2.32}, {"instance": "A-n32-k5", "method": "Tournament + PMX + Swap", "best_cost": 1140.74, "execution_time": 0.25, "feasible": true, "gap_percent": 18.7}, {"instance": "A-n32-k5", "method": "Tournament + PMX + Inversion", "best_cost": 984.35, "execution_time": 0.25, "feasible": true, "gap_percent": 2.43}, {"instance": "A-n32-k5", "method": "Roulette + OX + Swap", "best_cost": 1190.17, "execution_time": 0.28, "feasible": true, "gap_percent": 23.85}, {"instance": "A-n32-k5", "method": "Roulette + OX + Inversion", "best_cost": 1150.36, "execution_time": 0.28, "feasible": true, "gap_percent": 19.7}, {"instance": "A-n32-k5", "method": "Roulette + PMX + Swap", "best_cost": 1482.3, "execution_time": 0.28, "feasible": true, "gap_percent": 54.25}, {"instance": "A-n32-k5", "method": "Roulette + PMX + Inversion", "best_cost": 1469.24, "execution_time": 0.29, "feasible": true, "gap_percent": 52.89}, {"instance": "A-n32-k5", "method": "Rank + OX + Swap", "best_cost": 1075.18, "execution_time": 0.4, "feasible": true, "gap_percent": 11.88}, {"instance": "A-n32-k5", "method": "Rank + OX + Inversion", "best_cost": 977.48, "execution_time": 0.39, "feasible": true, "gap_percent": 1.71}, {"instance": "A-n32-k5", "method": "Rank + PMX + Swap", "best_cost": 1093.18, "execution_time": 0.35, "feasible": true, "gap_percent": 13.75}, {"instance": "A-n32-k5", "method": "Rank + PMX + Inversion", "best_cost": 1352.99, "execution_time": 0.41, "feasible": true, "gap_percent": 40.79}, {"instance": "A-n32-k5", "method": "Uniform + OX + Swap", "best_cost": 1563.68, "execution_time": 0.76, "feasible": true, "gap_percent": 62.71}, {"instance": "A-n32-k5", "method": "Uniform + OX + Inversion", "best_cost": 1550.85, "execution_time": 0.63, "feasible": true, "gap_percent": 61.38}, {"instance": "A-n32-k5", "method": "Uniform + PMX + Swap", "best_cost": 1596.7, "execution_time": 0.5, "feasible": true, "gap_percent": 66.15}, {"instance": "A-n32-k5", "method": "Uniform + PMX + Inversion", "best_cost": 1586.61, "execution_time": 0.5, "feasible": true, "gap_percent": 65.1}, {"instance": "A-n32-k5", "method": "Deterministic + OX + Swap", "best_cost": 1115.26, "execution_time": 0.3, "feasible": true, "gap_percent": 16.05}, {"instance": "A-n32-k5", "method": "Deterministic + OX + Inversion", "best_cost": 908.75, "execution_time": 0.29, "feasible": true, "gap_percent": -5.44}, {"instance": "A-n32-k5", "method": "Deterministic + PMX + Swap", "best_cost": 1064.07, "execution_time": 0.24, "feasible": true, "gap_percent": 10.73}, {"instance": "A-n32-k5", "method": "Deterministic + PMX + Inversion", "best_cost": 941.5, "execution_time": 0.25, "feasible": true, "gap_percent": -2.03}, {"instance": "A-n32-k5", "method": "Remainder + OX + Swap", "best_cost": 1294.4, "execution_time": 1.15, "feasible": true, "gap_percent": 34.69}, {"instance": "A-n32-k5", "method": "Remainder + OX + Inversion", "best_cost": 1236.28, "execution_time": 1.26, "feasible": true, "gap_percent": 28.65}, {"instance": "A-n32-k5", "method": "Remainder + PMX + Swap", "best_cost": 1624.5, "execution_time": 1.21, "feasible": true, "gap_percent": 69.04}, {"instance": "A-n32-k5", "method": "Remainder + PMX + Inversion", "best_cost": 1440.01, "execution_time": 1.22, "feasible": true, "gap_percent": 49.84}, {"instance": "A-n32-k5", "method": "Tournament + OX + Swap", "best_cost": 1088.92, "execution_time": 0.29, "feasible": true, "gap_percent": 13.31}, {"instance": "A-n32-k5", "method": "Tournament + OX + Inversion", "best_cost": 941.46, "execution_time": 0.29, "feasible": true, "gap_percent": -2.03}, {"instance": "A-n32-k5", "method": "Tournament + PMX + Swap", "best_cost": 1005.41, "execution_time": 0.24, "feasible": true, "gap_percent": 4.62}, {"instance": "A-n32-k5", "method": "Tournament + PMX + Inversion", "best_cost": 1083.74, "execution_time": 0.24, "feasible": true, "gap_percent": 12.77}, {"instance": "A-n32-k5", "method": "Roulette + OX + Swap", "best_cost": 1198.09, "execution_time": 0.27, "feasible": true, "gap_percent": 24.67}, {"instance": "A-n32-k5", "method": "Roulette + OX + Inversion", "best_cost": 1288.59, "execution_time": 0.27, "feasible": true, "gap_percent": 34.09}, {"instance": "A-n32-k5", "method": "Roulette + PMX + Swap", "best_cost": 1496.45, "execution_time": 0.28, "feasible": true, "gap_percent": 55.72}, {"instance": "A-n32-k5", "method": "Roulette + PMX + Inversion", "best_cost": 1433.54, "execution_time": 0.28, "feasible": true, "gap_percent": 49.17}, {"instance": "A-n32-k5", "method": "Rank + OX + Swap", "best_cost": 1073.11, "execution_time": 0.37, "feasible": true, "gap_percent": 11.67}, {"instance": "A-n32-k5", "method": "Rank + OX + Inversion", "best_cost": 944.34, "execution_time": 0.37, "feasible": true, "gap_percent": -1.73}, {"instance": "A-n32-k5", "method": "Rank + PMX + Swap", "best_cost": 1242.44, "execution_time": 0.35, "feasible": true, "gap_percent": 29.29}, {"instance": "A-n32-k5", "method": "Rank + PMX + Inversion", "best_cost": 1382.32, "execution_time": 0.39, "feasible": true, "gap_percent": 43.84}, {"instance": "A-n32-k5", "method": "Uniform + OX + Swap", "best_cost": 1571.59, "execution_time": 0.59, "feasible": true, "gap_percent": 63.54}, {"instance": "A-n32-k5", "method": "Uniform + OX + Inversion", "best_cost": 1625.93, "execution_time": 0.69, "feasible": true, "gap_percent": 69.19}, {"instance": "A-n32-k5", "method": "Uniform + PMX + Swap", "best_cost": 1559.83, "execution_time": 0.49, "feasible": true, "gap_percent": 62.31}, {"instance": "A-n32-k5", "method": "Uniform + PMX + Inversion", "best_cost": 1542.16, "execution_time": 0.5, "feasible": true, "gap_percent": 60.47}, {"instance": "A-n32-k5", "method": "Deterministic + OX + Swap", "best_cost": 1122.46, "execution_time": 0.29, "feasible": true, "gap_percent": 16.8}, {"instance": "A-n32-k5", "method": "Deterministic + OX + Inversion", "best_cost": 876.38, "execution_time": 0.28, "feasible": true, "gap_percent": -8.81}, {"instance": "A-n32-k5", "method": "Deterministic + PMX + Swap", "best_cost": 1001.29, "execution_time": 0.23, "feasible": true, "gap_percent": 4.19}, {"instance": "A-n32-k5", "method": "Deterministic + PMX + Inversion", "best_cost": 860.44, "execution_time": 0.23, "feasible": true, "gap_percent": -10.46}, {"instance": "A-n32-k5", "method": "Remainder + OX + Swap", "best_cost": 1132.16, "execution_time": 1.15, "feasible": true, "gap_percent": 17.81}, {"instance": "A-n32-k5", "method": "Remainder + OX + Inversion", "best_cost": 1369.42, "execution_time": 1.13, "feasible": true, "gap_percent": 42.5}, {"instance": "A-n32-k5", "method": "Remainder + PMX + Swap", "best_cost": 1506.02, "execution_time": 1.15, "feasible": true, "gap_percent": 56.71}, {"instance": "A-n32-k5", "method": "Remainder + PMX + Inversion", "best_cost": 1496.55, "execution_time": 1.14, "feasible": true, "gap_percent": 55.73}, {"instance": "A-n32-k5", "method": "Tournament + OX + Swap", "best_cost": 931.72, "execution_time": 0.55, "feasible": true, "gap_percent": -3.05}, {"instance": "A-n32-k5", "method": "Tournament + OX + Inversion", "best_cost": 1099.12, "execution_time": 0.56, "feasible": true, "gap_percent": 14.37}, {"instance": "A-n32-k5", "method": "Tournament + PMX + Swap", "best_cost": 1010.83, "execution_time": 0.47, "feasible": true, "gap_percent": 5.19}, {"instance": "A-n32-k5", "method": "Tournament + PMX + Inversion", "best_cost": 986.51, "execution_time": 0.48, "feasible": true, "gap_percent": 2.65}, {"instance": "A-n32-k5", "method": "Roulette + OX + Swap", "best_cost": 1337.93, "execution_time": 0.5, "feasible": true, "gap_percent": 39.22}, {"instance": "A-n32-k5", "method": "Roulette + OX + Inversion", "best_cost": 1300.93, "execution_time": 0.51, "feasible": true, "gap_percent": 35.37}, {"instance": "A-n32-k5", "method": "Roulette + PMX + Swap", "best_cost": 1510.35, "execution_time": 0.54, "feasible": true, "gap_percent": 57.16}, {"instance": "A-n32-k5", "method": "Roulette + PMX + Inversion", "best_cost": 1485.93, "execution_time": 0.54, "feasible": true, "gap_percent": 54.62}, {"instance": "A-n32-k5", "method": "Rank + OX + Swap", "best_cost": 971.14, "execution_time": 0.72, "feasible": true, "gap_percent": 1.06}, {"instance": "A-n32-k5", "method": "Rank + OX + Inversion", "best_cost": 1021.48, "execution_time": 0.72, "feasible": true, "gap_percent": 6.29}, {"instance": "A-n32-k5", "method": "Rank + PMX + Swap", "best_cost": 1339.5, "execution_time": 0.77, "feasible": true, "gap_percent": 39.39}, {"instance": "A-n32-k5", "method": "Rank + PMX + Inversion", "best_cost": 1301.94, "execution_time": 0.77, "feasible": true, "gap_percent": 35.48}, {"instance": "A-n32-k5", "method": "Uniform + OX + Swap", "best_cost": 1601.78, "execution_time": 1.21, "feasible": true, "gap_percent": 66.68}, {"instance": "A-n32-k5", "method": "Uniform + OX + Inversion", "best_cost": 1574.5, "execution_time": 1.21, "feasible": true, "gap_percent": 63.84}, {"instance": "A-n32-k5", "method": "Uniform + PMX + Swap", "best_cost": 1584.29, "execution_time": 1.05, "feasible": true, "gap_percent": 64.86}, {"instance": "A-n32-k5", "method": "Uniform + PMX + Inversion", "best_cost": 1573.82, "execution_time": 1.02, "feasible": true, "gap_percent": 63.77}, {"instance": "A-n32-k5", "method": "Deterministic + OX + Swap", "best_cost": 1001.35, "execution_time": 0.55, "feasible": true, "gap_percent": 4.2}, {"instance": "A-n32-k5", "method": "Deterministic + OX + Inversion", "best_cost": 876.88, "execution_time": 0.57, "feasible": true, "gap_percent": -8.75}, {"instance": "A-n32-k5", "method": "Deterministic + PMX + Swap", "best_cost": 976.45, "execution_time": 0.47, "feasible": true, "gap_percent": 1.61}, {"instance": "A-n32-k5", "method": "Deterministic + PMX + Inversion", "best_cost": 919.48, "execution_time": 0.52, "feasible": true, "gap_percent": -4.32}, {"instance": "A-n32-k5", "method": "Remainder + OX + Swap", "best_cost": 1286.07, "execution_time": 2.15, "feasible": true, "gap_percent": 33.83}, {"instance": "A-n32-k5", "method": "Remainder + OX + Inversion", "best_cost": 1193.04, "execution_time": 2.21, "feasible": true, "gap_percent": 24.15}, {"instance": "A-n32-k5", "method": "Remainder + PMX + Swap", "best_cost": 1470.6, "execution_time": 2.2, "feasible": true, "gap_percent": 53.03}, {"instance": "A-n32-k5", "method": "Remainder + PMX + Inversion", "best_cost": 1577.97, "execution_time": 2.19, "feasible": true, "gap_percent": 64.2}];
+        const sortedResults = [{"instance": "A-n32-k5", "method": "Deterministic + PMX + Inversion", "best_cost": 860.44, "execution_time": 0.23, "feasible": true, "gap_percent": -10.46}, {"instance": "A-n32-k5", "method": "Deterministic + OX + Inversion", "best_cost": 876.38, "execution_time": 0.28, "feasible": true, "gap_percent": -8.81}, {"instance": "A-n32-k5", "method": "Deterministic + OX + Inversion", "best_cost": 876.88, "execution_time": 0.57, "feasible": true, "gap_percent": -8.75}, {"instance": "A-n32-k5", "method": "Deterministic + OX + Inversion", "best_cost": 908.75, "execution_time": 0.29, "feasible": true, "gap_percent": -5.44}, {"instance": "A-n32-k5", "method": "Deterministic + PMX + Inversion", "best_cost": 919.48, "execution_time": 0.52, "feasible": true, "gap_percent": -4.32}, {"instance": "A-n32-k5", "method": "Tournament + OX + Swap", "best_cost": 931.72, "execution_time": 0.55, "feasible": true, "gap_percent": -3.05}, {"instance": "A-n32-k5", "method": "Tournament + OX + Inversion", "best_cost": 938.71, "execution_time": 0.3, "feasible": true, "gap_percent": -2.32}, {"instance": "A-n32-k5", "method": "Tournament + OX + Inversion", "best_cost": 941.46, "execution_time": 0.29, "feasible": true, "gap_percent": -2.03}, {"instance": "A-n32-k5", "method": "Deterministic + PMX + Inversion", "best_cost": 941.5, "execution_time": 0.25, "feasible": true, "gap_percent": -2.03}, {"instance": "A-n32-k5", "method": "Rank + OX + Inversion", "best_cost": 944.34, "execution_time": 0.37, "feasible": true, "gap_percent": -1.73}, {"instance": "A-n32-k5", "method": "Rank + OX + Swap", "best_cost": 971.14, "execution_time": 0.72, "feasible": true, "gap_percent": 1.06}, {"instance": "A-n32-k5", "method": "Deterministic + PMX + Swap", "best_cost": 976.45, "execution_time": 0.47, "feasible": true, "gap_percent": 1.61}, {"instance": "A-n32-k5", "method": "Rank + OX + Inversion", "best_cost": 977.48, "execution_time": 0.39, "feasible": true, "gap_percent": 1.71}, {"instance": "A-n32-k5", "method": "Tournament + PMX + Inversion", "best_cost": 984.35, "execution_time": 0.25, "feasible": true, "gap_percent": 2.43}, {"instance": "A-n32-k5", "method": "Tournament + PMX + Inversion", "best_cost": 986.51, "execution_time": 0.48, "feasible": true, "gap_percent": 2.65}, {"instance": "A-n32-k5", "method": "Deterministic + PMX + Swap", "best_cost": 1001.29, "execution_time": 0.23, "feasible": true, "gap_percent": 4.19}, {"instance": "A-n32-k5", "method": "Deterministic + OX + Swap", "best_cost": 1001.35, "execution_time": 0.55, "feasible": true, "gap_percent": 4.2}, {"instance": "A-n32-k5", "method": "Tournament + PMX + Swap", "best_cost": 1005.41, "execution_time": 0.24, "feasible": true, "gap_percent": 4.62}, {"instance": "A-n32-k5", "method": "Tournament + PMX + Swap", "best_cost": 1010.83, "execution_time": 0.47, "feasible": true, "gap_percent": 5.19}, {"instance": "A-n32-k5", "method": "Rank + OX + Inversion", "best_cost": 1021.48, "execution_time": 0.72, "feasible": true, "gap_percent": 6.29}, {"instance": "A-n32-k5", "method": "Tournament + OX + Swap", "best_cost": 1047.87, "execution_time": 0.31, "feasible": true, "gap_percent": 9.04}, {"instance": "A-n32-k5", "method": "Deterministic + PMX + Swap", "best_cost": 1064.07, "execution_time": 0.24, "feasible": true, "gap_percent": 10.73}, {"instance": "A-n32-k5", "method": "Rank + OX + Swap", "best_cost": 1073.11, "execution_time": 0.37, "feasible": true, "gap_percent": 11.67}, {"instance": "A-n32-k5", "method": "Rank + OX + Swap", "best_cost": 1075.18, "execution_time": 0.4, "feasible": true, "gap_percent": 11.88}, {"instance": "A-n32-k5", "method": "Tournament + PMX + Inversion", "best_cost": 1083.74, "execution_time": 0.24, "feasible": true, "gap_percent": 12.77}, {"instance": "A-n32-k5", "method": "Tournament + OX + Swap", "best_cost": 1088.92, "execution_time": 0.29, "feasible": true, "gap_percent": 13.31}, {"instance": "A-n32-k5", "method": "Rank + PMX + Swap", "best_cost": 1093.18, "execution_time": 0.35, "feasible": true, "gap_percent": 13.75}, {"instance": "A-n32-k5", "method": "Tournament + OX + Inversion", "best_cost": 1099.12, "execution_time": 0.56, "feasible": true, "gap_percent": 14.37}, {"instance": "A-n32-k5", "method": "Deterministic + OX + Swap", "best_cost": 1115.26, "execution_time": 0.3, "feasible": true, "gap_percent": 16.05}, {"instance": "A-n32-k5", "method": "Deterministic + OX + Swap", "best_cost": 1122.46, "execution_time": 0.29, "feasible": true, "gap_percent": 16.8}, {"instance": "A-n32-k5", "method": "Remainder + OX + Swap", "best_cost": 1132.16, "execution_time": 1.15, "feasible": true, "gap_percent": 17.81}, {"instance": "A-n32-k5", "method": "Tournament + PMX + Swap", "best_cost": 1140.74, "execution_time": 0.25, "feasible": true, "gap_percent": 18.7}, {"instance": "A-n32-k5", "method": "Roulette + OX + Inversion", "best_cost": 1150.36, "execution_time": 0.28, "feasible": true, "gap_percent": 19.7}, {"instance": "A-n32-k5", "method": "Roulette + OX + Swap", "best_cost": 1190.17, "execution_time": 0.28, "feasible": true, "gap_percent": 23.85}, {"instance": "A-n32-k5", "method": "Remainder + OX + Inversion", "best_cost": 1193.04, "execution_time": 2.21, "feasible": true, "gap_percent": 24.15}, {"instance": "A-n32-k5", "method": "Roulette + OX + Swap", "best_cost": 1198.09, "execution_time": 0.27, "feasible": true, "gap_percent": 24.67}, {"instance": "A-n32-k5", "method": "Remainder + OX + Inversion", "best_cost": 1236.28, "execution_time": 1.26, "feasible": true, "gap_percent": 28.65}, {"instance": "A-n32-k5", "method": "Rank + PMX + Swap", "best_cost": 1242.44, "execution_time": 0.35, "feasible": true, "gap_percent": 29.29}, {"instance": "A-n32-k5", "method": "Remainder + OX + Swap", "best_cost": 1286.07, "execution_time": 2.15, "feasible": true, "gap_percent": 33.83}, {"instance": "A-n32-k5", "method": "Roulette + OX + Inversion", "best_cost": 1288.59, "execution_time": 0.27, "feasible": true, "gap_percent": 34.09}, {"instance": "A-n32-k5", "method": "Remainder + OX + Swap", "best_cost": 1294.4, "execution_time": 1.15, "feasible": true, "gap_percent": 34.69}, {"instance": "A-n32-k5", "method": "Roulette + OX + Inversion", "best_cost": 1300.93, "execution_time": 0.51, "feasible": true, "gap_percent": 35.37}, {"instance": "A-n32-k5", "method": "Rank + PMX + Inversion", "best_cost": 1301.94, "execution_time": 0.77, "feasible": true, "gap_percent": 35.48}, {"instance": "A-n32-k5", "method": "Roulette + OX + Swap", "best_cost": 1337.93, "execution_time": 0.5, "feasible": true, "gap_percent": 39.22}, {"instance": "A-n32-k5", "method": "Rank + PMX + Swap", "best_cost": 1339.5, "execution_time": 0.77, "feasible": true, "gap_percent": 39.39}, {"instance": "A-n32-k5", "method": "Rank + PMX + Inversion", "best_cost": 1352.99, "execution_time": 0.41, "feasible": true, "gap_percent": 40.79}, {"instance": "A-n32-k5", "method": "Remainder + OX + Inversion", "best_cost": 1369.42, "execution_time": 1.13, "feasible": true, "gap_percent": 42.5}, {"instance": "A-n32-k5", "method": "Rank + PMX + Inversion", "best_cost": 1382.32, "execution_time": 0.39, "feasible": true, "gap_percent": 43.84}, {"instance": "A-n32-k5", "method": "Roulette + PMX + Inversion", "best_cost": 1433.54, "execution_time": 0.28, "feasible": true, "gap_percent": 49.17}, {"instance": "A-n32-k5", "method": "Remainder + PMX + Inversion", "best_cost": 1440.01, "execution_time": 1.22, "feasible": true, "gap_percent": 49.84}, {"instance": "A-n32-k5", "method": "Remainder + PMX + Inversion", "best_cost": 1462.79, "execution_time": 1.18, "feasible": true, "gap_percent": 52.22}, {"instance": "A-n32-k5", "method": "Roulette + PMX + Inversion", "best_cost": 1469.24, "execution_time": 0.29, "feasible": true, "gap_percent": 52.89}, {"instance": "A-n32-k5", "method": "Remainder + PMX + Swap", "best_cost": 1470.6, "execution_time": 2.2, "feasible": true, "gap_percent": 53.03}, {"instance": "A-n32-k5", "method": "Roulette + PMX + Swap", "best_cost": 1482.3, "execution_time": 0.28, "feasible": true, "gap_percent": 54.25}, {"instance": "A-n32-k5", "method": "Roulette + PMX + Inversion", "best_cost": 1485.93, "execution_time": 0.54, "feasible": true, "gap_percent": 54.62}, {"instance": "A-n32-k5", "method": "Roulette + PMX + Swap", "best_cost": 1496.45, "execution_time": 0.28, "feasible": true, "gap_percent": 55.72}, {"instance": "A-n32-k5", "method": "Remainder + PMX + Inversion", "best_cost": 1496.55, "execution_time": 1.14, "feasible": true, "gap_percent": 55.73}, {"instance": "A-n32-k5", "method": "Remainder + PMX + Swap", "best_cost": 1506.02, "execution_time": 1.15, "feasible": true, "gap_percent": 56.71}, {"instance": "A-n32-k5", "method": "Roulette + PMX + Swap", "best_cost": 1510.35, "execution_time": 0.54, "feasible": true, "gap_percent": 57.16}, {"instance": "A-n32-k5", "method": "Uniform + PMX + Inversion", "best_cost": 1542.16, "execution_time": 0.5, "feasible": true, "gap_percent": 60.47}, {"instance": "A-n32-k5", "method": "Uniform + OX + Inversion", "best_cost": 1550.85, "execution_time": 0.63, "feasible": true, "gap_percent": 61.38}, {"instance": "A-n32-k5", "method": "Uniform + PMX + Swap", "best_cost": 1559.83, "execution_time": 0.49, "feasible": true, "gap_percent": 62.31}, {"instance": "A-n32-k5", "method": "Uniform + OX + Swap", "best_cost": 1563.68, "execution_time": 0.76, "feasible": true, "gap_percent": 62.71}, {"instance": "A-n32-k5", "method": "Uniform + OX + Swap", "best_cost": 1571.59, "execution_time": 0.59, "feasible": true, "gap_percent": 63.54}, {"instance": "A-n32-k5", "method": "Uniform + PMX + Inversion", "best_cost": 1573.82, "execution_time": 1.02, "feasible": true, "gap_percent": 63.77}, {"instance": "A-n32-k5", "method": "Uniform + OX + Inversion", "best_cost": 1574.5, "execution_time": 1.21, "feasible": true, "gap_percent": 63.84}, {"instance": "A-n32-k5", "method": "Remainder + PMX + Inversion", "best_cost": 1577.97, "execution_time": 2.19, "feasible": true, "gap_percent": 64.2}, {"instance": "A-n32-k5", "method": "Uniform + PMX + Swap", "best_cost": 1584.29, "execution_time": 1.05, "feasible": true, "gap_percent": 64.86}, {"instance": "A-n32-k5", "method": "Uniform + PMX + Inversion", "best_cost": 1586.61, "execution_time": 0.5, "feasible": true, "gap_percent": 65.1}, {"instance": "A-n32-k5", "method": "Remainder + PMX + Inversion", "best_cost": 1591.41, "execution_time": 1.16, "feasible": true, "gap_percent": 65.6}, {"instance": "A-n32-k5", "method": "Uniform + PMX + Swap", "best_cost": 1596.7, "execution_time": 0.5, "feasible": true, "gap_percent": 66.15}, {"instance": "A-n32-k5", "method": "Uniform + OX + Swap", "best_cost": 1601.78, "execution_time": 1.21, "feasible": true, "gap_percent": 66.68}, {"instance": "A-n32-k5", "method": "Remainder + PMX + Swap", "best_cost": 1624.5, "execution_time": 1.21, "feasible": true, "gap_percent": 69.04}, {"instance": "A-n32-k5", "method": "Uniform + OX + Inversion", "best_cost": 1625.93, "execution_time": 0.69, "feasible": true, "gap_percent": 69.19}];
+        const KNOWN_OPTIMUM = 961;
+        
+        // Populate results table
+        const tableBody = document.getElementById('resultsTable');
+        sortedResults.forEach((result, index) => {
+            const row = document.createElement('tr');
+            const gapPercent = result.gap_percent || (((result.best_cost - KNOWN_OPTIMUM) / KNOWN_OPTIMUM) * 100).toFixed(1);
+            const gapClass = gapPercent < 5 ? 'bg-emerald-500/20 text-emerald-400' :
+                           gapPercent < 10 ? 'bg-amber-500/20 text-amber-400' :
+                           'bg-rose-500/20 text-rose-400';
+            
+            row.className = `border-b border-gray-700 hover:bg-gray-700/50 transition ${index === 0 ? 'bg-emerald-500/10 font-semibold' : ''}`;
+            
+            row.innerHTML = `
+                <td class="py-4 px-4">
+                    <span class="font-bold ${index === 0 ? 'text-emerald-400 text-lg' : 'text-gray-400'}">
+                        ${index === 0 ? '🏆' : index + 1}
+                    </span>
+                </td>
+                <td class="py-4 px-4 font-medium text-gray-100 text-sm">${result.method}</td>
+                <td class="py-4 px-4 text-right font-mono font-bold text-cyan-400">${result.best_cost.toFixed(2)}</td>
+                <td class="py-4 px-4 text-right">
+                    <span class="font-semibold px-3 py-1 rounded-full text-xs ${gapClass}">
+                        ${gapPercent.toFixed(1)}%
+                    </span>
+                </td>
+                <td class="py-4 px-4 text-right text-sm text-gray-300">${result.execution_time.toFixed(2)}s</td>
+                <td class="py-4 px-4 text-center text-lg">
+                    ${result.feasible ? '✅' : '❌'}
+                </td>
+            `;
+            tableBody.appendChild(row);
+        });
+        
+        // Cost comparison chart
+        const costCtx = document.getElementById('costChart').getContext('2d');
+        new Chart(costCtx, {
+            type: 'bar',
+            data: {
+                labels: sortedResults.map((r, i) => `${i+1}. ${r.method}`),
+                datasets: [{
+                    label: 'Best Cost',
+                    data: sortedResults.map(r => r.best_cost),
+                    backgroundColor: sortedResults.map((r, i) => 
+                        i === 0 ? 'rgba(16, 185, 129, 0.95)' : 'rgba(6, 182, 212, 0.85)'
+                    ),
+                    borderColor: sortedResults.map((r, i) => 
+                        i === 0 ? 'rgb(5, 150, 105)' : 'rgb(8, 145, 178)'
+                    ),
+                    borderWidth: 2,
+                    borderRadius: 6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                indexAxis: 'y',
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        titleColor: '#fff',
+                        bodyColor: '#fff',
+                        borderColor: '#06b6d4',
+                        borderWidth: 1,
+                        padding: 12,
+                        displayColors: false,
+                        callbacks: {
+                            label: function(context) {
+                                return 'Cost: ' + context.parsed.x.toFixed(2);
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: { 
+                        beginAtZero: false,
+                        ticks: { color: '#9ca3af' },
+                        grid: { color: '#374151' }
+                    },
+                    y: {
+                        ticks: { color: '#9ca3af' },
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+        
+        // Execution time chart
+        const timeCtx = document.getElementById('timeChart').getContext('2d');
+        new Chart(timeCtx, {
+            type: 'bar',
+            data: {
+                labels: allResults.map((r, i) => `${i+1}. ${r.method}`),
+                datasets: [{
+                    label: 'Execution Time (s)',
+                    data: allResults.map(r => r.execution_time),
+                    backgroundColor: 'rgba(139, 92, 246, 0.85)',
+                    borderColor: 'rgb(124, 58, 255)',
+                    borderWidth: 2,
+                    borderRadius: 6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                indexAxis: 'y',
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        titleColor: '#fff',
+                        bodyColor: '#fff',
+                        borderColor: '#a78bfa',
+                        borderWidth: 1,
+                        padding: 12,
+                        displayColors: false
+                    }
+                },
+                scales: {
+                    x: { 
+                        beginAtZero: true,
+                        ticks: { color: '#9ca3af' },
+                        grid: { color: '#374151' }
+                    },
+                    y: {
+                        ticks: { color: '#9ca3af' },
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+        
+        // Gap percentage chart
+        const gapCtx = document.getElementById('gapChart').getContext('2d');
+        new Chart(gapCtx, {
+            type: 'bar',
+            data: {
+                labels: sortedResults.map((r, i) => `${i+1}. ${r.method}`),
+                datasets: [{
+                    label: 'Gap to Optimum (%)',
+                    data: sortedResults.map(r => r.gap_percent || (((r.best_cost - KNOWN_OPTIMUM) / KNOWN_OPTIMUM) * 100)),
+                    backgroundColor: sortedResults.map(r => {
+                        const gap = r.gap_percent || (((r.best_cost - KNOWN_OPTIMUM) / KNOWN_OPTIMUM) * 100);
+                        return gap < 5 ? 'rgba(16, 185, 129, 0.95)' :
+                               gap < 10 ? 'rgba(245, 158, 11, 0.85)' :
+                               'rgba(239, 68, 68, 0.85)';
+                    }),
+                    borderColor: sortedResults.map(r => {
+                        const gap = r.gap_percent || (((r.best_cost - KNOWN_OPTIMUM) / KNOWN_OPTIMUM) * 100);
+                        return gap < 5 ? 'rgb(5, 150, 105)' :
+                               gap < 10 ? 'rgb(217, 119, 6)' :
+                               'rgb(220, 38, 38)';
+                    }),
+                    borderWidth: 2,
+                    borderRadius: 6
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: true,
+                indexAxis: 'y',
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: 'rgba(0, 0, 0, 0.8)',
+                        titleColor: '#fff',
+                        bodyColor: '#fff',
+                        borderWidth: 1,
+                        padding: 12,
+                        displayColors: false,
+                        callbacks: {
+                            label: function(context) {
+                                return 'Gap: ' + context.parsed.x.toFixed(2) + '%';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: { 
+                        beginAtZero: true,
+                        ticks: { color: '#9ca3af' },
+                        grid: { color: '#374151' }
+                    },
+                    y: {
+                        ticks: { color: '#9ca3af' },
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+    
+    </script>
+</body>
+</html>
